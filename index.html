@@ -19,10 +19,19 @@
     <nav class="nav">
       <a class="brand" href="."><span class="brand-dot"></span> TikTok Ideas</a>
       <div class="nav-links">
+        <a href="#ideas">Ideas</a>
+        <a href="#competitors">Competitors</a>
         <a href="data/latest.json">Data</a>
-        <a href="https://github.com/Fred4599/tiktok-ideas-dashboard">GitHub</a>
       </div>
     </nav>
+
+    <div class="quick-nav" aria-label="Dashboard sections">
+      <a href="#ideas">Record first</a>
+      <a href="#competitors">Competitors</a>
+      <a href="#performance">Performance</a>
+      <a href="#news">News</a>
+      <a href="#brief">Brief</a>
+    </div>
 
     <section class="hero">
       <div class="eyebrow">CREATOR INTELLIGENCE</div>
@@ -37,7 +46,7 @@
       <p class="range-note" id="generatedAt">Loading latest daily scan...</p>
     </section>
 
-    <section class="panel action-panel">
+    <section class="panel action-panel" id="ideas">
       <div class="panel-header">
         <div>
           <div class="eyebrow">RECORD FIRST</div>
@@ -48,7 +57,7 @@
       <div id="ideasGrid" class="ideas-grid"></div>
     </section>
 
-    <section class="grid-2">
+    <section class="grid-2" id="competitors">
       <div class="panel">
         <div class="panel-header compact">
           <div>
@@ -60,7 +69,7 @@
         </div>
         <div id="competitorList" class="feed-list"></div>
       </div>
-      <aside class="panel insights">
+      <aside class="panel insights" id="performance">
         <div class="eyebrow">PERFORMANCE</div>
         <h2>Braydon signals</h2>
         <div id="performanceList" class="insights-list"></div>
@@ -68,12 +77,12 @@
     </section>
 
     <section class="grid-2 lower-grid">
-      <div class="panel">
+      <div class="panel" id="news">
         <div class="eyebrow">EARLY CATCH</div>
         <h2>AI news and timing opportunities</h2>
         <div id="newsList" class="feed-list compact-list"></div>
       </div>
-      <div class="panel">
+      <div class="panel" id="brief">
         <div class="eyebrow">SOURCE OF TRUTH</div>
         <h2>Latest brief</h2>
         <div id="briefMarkdown" class="markdown-box"></div>

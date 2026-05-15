@@ -17,6 +17,27 @@ function metricLine(item) {
   if (item.collectCount != null) bits.push(`${fmt.format(item.collectCount)} saves`);
   return bits.join(' · ') || 'metrics n/a';
 }
+function daysOld(item) {
+  if (!item.date || !state.latest?.date) return null;
+  const itemDate = new Date(`${item.date}T00:00:00Z`);
+  const scanDate = new Date(`${state.latest.date}T00:00:00Z`);
+  if (Number.isNaN(itemDate.getTime()) || Number.isNaN(scanDate.getTime())) return null;
+  return Math.round((scanDate - itemDate) / 86400000);
+}
+function recentWindowItems(items, maxDays = 10) {
+  return items.filter(item => {
+    const age = daysOld(item);
+    return age !== null && age >= 0 && age <= maxDays;
+  });
+}
+function signalBadge(item) {
+  const views = item.playCount || 0;
+  const age = daysOld(item);
+  if (age === null) return 'date unknown';
+  if (views >= 10000) return 'source idea signal · 10K+';
+  if (views >= 2000) return 'monitoring signal · 2K+';
+  return 'recent post';
+}
 async function loadData() {
   const latest = await fetch('data/latest.json', { cache: 'no-store' }).then(r => r.json());
   return latest;
@@ -52,17 +73,26 @@ function renderCreatorFilter() {
 function renderCompetitors() {
   let items = state.latest.competitors.slice();
   if (state.creator !== 'all') items = items.filter(x => x.creator === state.creator);
-  items.sort((a, b) => (b.playCount || 0) - (a.playCount || 0));
-  get('competitorList').innerHTML = items.slice(0, 60).map(item => `
+  const recentItems = recentWindowItems(items, 10);
+  recentItems.sort((a, b) => {
+    const dateDiff = String(b.date || '').localeCompare(String(a.date || ''));
+    return dateDiff || ((b.playCount || 0) - (a.playCount || 0));
+  });
+  get('competitorList').innerHTML = recentItems.slice(0, 60).map(item => {
+    const age = daysOld(item);
+    const badge = signalBadge(item);
+    const badgeClass = (item.playCount || 0) >= 10000 ? 'signal-badge source' : ((item.playCount || 0) >= 2000 ? 'signal-badge monitor' : 'signal-badge');
+    return `
     <article class="feed-item">
       <div class="feed-top"><strong>@${escapeHtml(item.creator)}</strong><span class="metric">${escapeHtml(metricLine(item))}</span></div>
-      <div class="meta-line">${escapeHtml(item.date || '')}${item.isSponsored ? ' · sponsored/ad signal' : ''}</div>
+      <div class="meta-line">${escapeHtml(item.date || '')}${age !== null ? ` · ${age}d old` : ''}${item.isSponsored ? ' · sponsored/ad signal' : ''}</div>
+      <div class="${badgeClass}">${escapeHtml(badge)}</div>
       <p>${escapeHtml(compact(item.topic || item.text || '', 230))}</p>
       ${item.onScreenTitle ? `<div class="label">Title</div><div class="hook">${escapeHtml(item.onScreenTitle)}</div>` : ''}
       ${item.spokenHook ? `<div class="label">Hook</div><div class="hook">${escapeHtml(item.spokenHook)}</div>` : ''}
       ${item.webVideoUrl ? `<a href="${escapeHtml(item.webVideoUrl)}" target="_blank" rel="noopener">Open TikTok →</a>` : ''}
-    </article>
-  `).join('') || '<p>No competitor items found for this filter.</p>';
+    </article>`;
+  }).join('') || '<p>No competitor posts from the last 10 days for this filter. Older high-view posts are intentionally hidden so they do not look like current viral signals.</p>';
 }
 function renderPerformance() {
   const p = state.latest.performance || [];

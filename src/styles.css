@@ -70,6 +70,9 @@ h1 { font-size: clamp(48px, 8vw, 90px); line-height:.92; margin: 18px auto; max-
 .feed-top strong { font-size:15px; overflow-wrap:anywhere; }
 .metric { color: var(--green); white-space:normal; text-align:right; font: 600 12px 'JetBrains Mono', monospace; max-width: 48%; }
 .meta-line { color:var(--muted-2); font-size:12px; margin-top:4px; }
+.signal-badge { display:inline-flex; width:max-content; max-width:100%; margin-top:8px; border:1px solid var(--border-soft); border-radius:999px; padding:5px 9px; color:var(--muted); background:rgba(255,255,255,.035); font:600 11px/1 'JetBrains Mono', monospace; text-transform:uppercase; letter-spacing:.04em; }
+.signal-badge.monitor { color:var(--yellow); border-color:rgba(245,158,11,.26); background:rgba(245,158,11,.08); }
+.signal-badge.source { color:var(--green); border-color:rgba(16,185,129,.32); background:rgba(16,185,129,.09); }
 .feed-item a { color: var(--accent-2); text-decoration:none; font-size:12px; display:inline-flex; align-items:center; min-height: 36px; padding-top:6px; }
 .insights-list { display:flex; flex-direction:column; gap:12px; margin-top:20px; }
 .insight { padding:14px; border:1px solid var(--border-soft); border-radius:12px; background:rgba(255,255,255,.025); }

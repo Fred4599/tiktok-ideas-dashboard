@@ -1,0 +1,9 @@
+{
+  "name": "tiktok-ideas-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static GitHub Pages dashboard for Braydon Carter's TikTok ideas and competitor radar.",
+  "scripts": {
+    "check": "python3 -m json.tool data/latest.json >/dev/null"
+  }
+}

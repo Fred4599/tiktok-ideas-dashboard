@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TikTok Ideas Dashboard — Braydon Carter</title>
+  <meta name="description" content="Daily TikTok ideas, competitor scans, creator performance, and AI news opportunities for Braydon Carter." />
+  <meta property="og:title" content="TikTok Ideas Dashboard — Braydon Carter" />
+  <meta property="og:description" content="Daily AI creator idea dashboard powered by Braydon's Hermes TikTok engine." />
+  <meta name="theme-color" content="#07080a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <main class="shell">
+    <nav class="nav">
+      <a class="brand" href="."><span class="brand-dot"></span> TikTok Ideas</a>
+      <div class="nav-links">
+        <a href="data/latest.json">Data</a>
+        <a href="https://github.com/Fred4599/tiktok-ideas-dashboard">GitHub</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="eyebrow">CREATOR INTELLIGENCE</div>
+      <h1>Know what to record next.</h1>
+      <p>Daily TikTok ideas, competitor topics, Braydon performance signals, and early AI news opportunities in one glanceable dashboard.</p>
+      <div class="hero-stats">
+        <div class="hero-number"><span id="ideaCount">—</span><label>Ideas in latest brief</label></div>
+        <div class="hero-pill"><span id="competitorCount">—</span><label>Competitor posts scanned</label></div>
+        <div class="hero-pill"><span id="coverageCount">—</span><label>Competitors covered</label></div>
+        <div class="hero-pill"><span id="latestDate">—</span><label>Latest brief date</label></div>
+      </div>
+      <p class="range-note" id="generatedAt">Loading latest daily scan...</p>
+    </section>
+
+    <section class="panel action-panel">
+      <div class="panel-header">
+        <div>
+          <div class="eyebrow">RECORD FIRST</div>
+          <h2>Today's top ideas</h2>
+          <p class="panel-subtitle">Each card includes the angle, why it should work, and the exact title/hook spark to riff from.</p>
+        </div>
+      </div>
+      <div id="ideasGrid" class="ideas-grid"></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-header compact">
+          <div>
+            <div class="eyebrow">COMPETITOR RADAR</div>
+            <h2>What competitors are posting</h2>
+            <p class="panel-subtitle">Latest scan grouped by creator. Sorts by recent performance and keeps links back to TikTok.</p>
+          </div>
+          <select id="creatorFilter" class="select"></select>
+        </div>
+        <div id="competitorList" class="feed-list"></div>
+      </div>
+      <aside class="panel insights">
+        <div class="eyebrow">PERFORMANCE</div>
+        <h2>Braydon signals</h2>
+        <div id="performanceList" class="insights-list"></div>
+      </aside>
+    </section>
+
+    <section class="grid-2 lower-grid">
+      <div class="panel">
+        <div class="eyebrow">EARLY CATCH</div>
+        <h2>AI news and timing opportunities</h2>
+        <div id="newsList" class="feed-list compact-list"></div>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">SOURCE OF TRUTH</div>
+        <h2>Latest brief</h2>
+        <div id="briefMarkdown" class="markdown-box"></div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Sanitized public dashboard data only. Raw Apify payloads and credentials are not published.</span>
+      <span id="footerUpdated">Updated from Hermes TikTok engine.</span>
+    </footer>
+  </main>
+  <script src="src/main.js"></script>
+</body>
+</html>

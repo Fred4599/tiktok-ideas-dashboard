@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import json
 import re
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 ROOT = Path('/opt/data/hermes-content/tiktok')
@@ -134,11 +134,27 @@ def parse_news(markdown: str) -> list[dict]:
     return news[:12]
 
 
-def coverage_stats(summary: dict, competitors: list[dict]) -> dict:
+def coverage_stats(summary: dict, competitors: list[dict], scan_date: str = '') -> dict:
     handles = sorted({x.get('creator') for x in competitors if x.get('creator')})
     title_count = sum(1 for x in competitors if x.get('onScreenTitle'))
     hook_count = sum(1 for x in competitors if x.get('spokenHook'))
     total = len(competitors)
+    recent = []
+    try:
+        anchor = date.fromisoformat(scan_date)
+        for item in competitors:
+            if not item.get('date'):
+                continue
+            age = (anchor - date.fromisoformat(item['date'])).days
+            if 0 <= age <= 10:
+                recent.append(item)
+    except Exception:
+        recent = []
+    recent_total = len(recent)
+    recent_title_count = sum(1 for x in recent if x.get('onScreenTitle'))
+    recent_hook_count = sum(1 for x in recent if x.get('spokenHook'))
+    source_signals = sum(1 for x in recent if (x.get('playCount') or 0) >= 10000)
+    monitoring_signals = sum(1 for x in recent if 2000 <= (x.get('playCount') or 0) < 10000)
     return {
         'competitorPosts': summary.get('competitor_count') or total,
         'handlesCovered': len(summary.get('covered') or handles),
@@ -146,6 +162,12 @@ def coverage_stats(summary: dict, competitors: list[dict]) -> dict:
         'missingHandles': summary.get('missing') or [],
         'titleCoverage': f'{title_count}/{total}',
         'spokenHookCoverage': f'{hook_count}/{total}',
+        'recentWindowDays': 10,
+        'recentCompetitorPosts': recent_total,
+        'recentTitleCoverage': f'{recent_title_count}/{recent_total}' if recent_total else '0/0',
+        'recentSpokenHookCoverage': f'{recent_hook_count}/{recent_total}' if recent_total else '0/0',
+        'sourceIdeaSignals': source_signals,
+        'monitoringSignals': monitoring_signals,
     }
 
 
@@ -161,13 +183,14 @@ def main() -> int:
     cache = load_hook_cache()
     competitors = enrich_items(competitor_raw, cache.get('competitors', {}))
     braydon = enrich_items(braydon_raw, cache.get('braydon', {}))
+    scan_date = idea_path.name[:10]
     data = {
-        'date': idea_path.name[:10],
+        'date': scan_date,
         'generatedAt': datetime.fromtimestamp(idea_path.stat().st_mtime, timezone.utc).isoformat(),
         'publishedAt': datetime.now(timezone.utc).isoformat(),
         'sourceIdeaFile': str(idea_path),
         'ideas': parse_ideas(markdown),
-        'stats': coverage_stats(summary, competitors),
+        'stats': coverage_stats(summary, competitors, scan_date),
         'competitors': competitors,
         'braydonRecent': braydon,
         'performance': parse_performance(markdown, braydon, cache.get('braydon', {})),

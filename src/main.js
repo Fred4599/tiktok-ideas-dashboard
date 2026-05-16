@@ -48,7 +48,7 @@ function renderHero() {
   get('competitorCount').textContent = fmt.format(d.stats.competitorPosts || d.competitors.length);
   get('coverageCount').textContent = `${fmt.format(d.stats.handlesCovered || 0)}/10`;
   get('latestDate').textContent = d.date;
-  get('generatedAt').textContent = `Generated ${new Date(d.generatedAt).toLocaleString()} · title coverage ${d.stats.titleCoverage || 'n/a'} · spoken-hook coverage ${d.stats.spokenHookCoverage || 'n/a'}`;
+  get('generatedAt').textContent = `Generated ${new Date(d.generatedAt).toLocaleString()} · recent feed title coverage ${d.stats.recentTitleCoverage || d.stats.titleCoverage || 'n/a'} · recent spoken-hook coverage ${d.stats.recentSpokenHookCoverage || d.stats.spokenHookCoverage || 'n/a'} · ${fmt.format(d.stats.sourceIdeaSignals || 0)} source signals`;
   get('footerUpdated').textContent = `Published ${new Date(d.publishedAt).toLocaleString()}`;
 }
 function renderIdeas() {

@@ -29,27 +29,55 @@ def clean(s: str) -> str:
     return re.sub(r'\s+', ' ', (s or '').strip())
 
 
+def idea_from_chunk(title: str, body: str) -> dict:
+    tags_line = re.search(r'`([^`]+)`', body)
+    tags = [t.strip() for t in re.split(r'\s*\+\s*|\s*/\s*', tags_line.group(1))] if tags_line else []
+
+    def field(name: str) -> str:
+        m = re.search(rf'- \*\*{re.escape(name)}:\*\*\s*(.*?)(?=\n- \*\*|\n\*\*[^\n]+\*\*\s*`|\n## |\n---\n|\Z)', body, re.S)
+        return clean(m.group(1).strip().strip('"')) if m else ''
+
+    return {
+        'title': clean(title),
+        'tags': tags,
+        'about': field("What it's about"),
+        'evidence': field('Evidence'),
+        'onScreenTitle': field('On-screen title'),
+        'spokenHook': field('Spoken hook'),
+        'contentType': field('Content type'),
+        'why': field('Why this should work'),
+    }
+
+
 def parse_ideas(markdown: str) -> list[dict]:
-    chunks = re.split(r'\n## Idea\s+\d+:\s+', markdown)
     ideas = []
+
+    # Older briefs used explicit headings like "## Idea 1: Title".
+    chunks = re.split(r'\n## Idea\s+\d+:\s+', markdown)
     for chunk in chunks[1:]:
         title, _, rest = chunk.partition('\n')
         body = rest.split('\n---\n', 1)[0]
-        tags_line = re.search(r'`([^`]+)`', body)
-        tags = [t.strip() for t in re.split(r'\s*\+\s*|\s*/\s*', tags_line.group(1))] if tags_line else []
-        def field(name: str) -> str:
-            m = re.search(rf'- \*\*{re.escape(name)}:\*\*\s*(.*?)(?=\n- \*\*|\n\|---|\n---\n|\Z)', body, re.S)
-            return clean(m.group(1).strip().strip('"')) if m else ''
-        ideas.append({
-            'title': clean(title),
-            'tags': tags,
-            'about': field("What it's about"),
-            'evidence': field('Evidence'),
-            'onScreenTitle': field('On-screen title'),
-            'spokenHook': field('Spoken hook'),
-            'contentType': field('Content type'),
-            'why': field('Why this should work'),
-        })
+        ideas.append(idea_from_chunk(title, body))
+
+    if ideas:
+        return ideas
+
+    # Current Hermes-native briefs put ideas under "## Best ideas for today"
+    # as bold title lines followed by the same field bullets.
+    section_match = re.search(r'\n## Best ideas for today\n\n(.*?)(?=\n## |\Z)', markdown, re.S)
+    if not section_match:
+        return []
+
+    section = section_match.group(1).strip()
+    pattern = re.compile(r'(?:^|\n)\*\*([^\n*]+?)\*\*\s*(`[^`]+`)?\n')
+    matches = list(pattern.finditer(section))
+    for i, match in enumerate(matches):
+        title = match.group(1)
+        start = match.start()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(section)
+        body = section[start:end]
+        ideas.append(idea_from_chunk(title, body))
+
     return ideas
 
 

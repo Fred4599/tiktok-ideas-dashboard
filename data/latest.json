@@ -1,76 +1,9 @@
 {
-  "date": "2026-05-15",
-  "generatedAt": "2026-05-15T23:22:49.462711+00:00",
-  "publishedAt": "2026-05-16T01:48:52.158898+00:00",
-  "sourceIdeaFile": "/opt/data/hermes-content/tiktok/ideas/2026-05-15-tiktok-ideas.md",
-  "ideas": [
-    {
-      "title": "Turn one local-business lead into a campaign",
-      "tags": [
-        "🌊🔁 wave-ride",
-        "V2",
-        "reframe"
-      ],
-      "about": "Show a calm, ethical local-business version of the OpenClaw prospecting wave: find one public lead, identify a real marketing gap, mock up a useful offer, and draft a human outreach message. Keep it positioned as a workflow demo, not a get-rich-quick side hustle.",
-      "evidence": "Full competitor scan surfaced Marcin's May 12 OpenClaw + Google Maps contractor outreach post at **15.3K views** with complete hook layers: on-screen title **\"Openclaw + Google + Ai = $$$$ / Easy $10K a month\"** and spoken hook **\"Openclaw plus a clever guy using construction to make serious cash...\"**. Braydon's own local-business and visual-output demos are strong: Claude UGC is **159.2K**, Arcads/product-link ad is **18.9K**, and Claude website build is **5.5K**.",
-      "onScreenTitle": "AI can find local leads for you",
-      "spokenHook": "If you run a local service business, this is how AI can help you find one real lead and turn it into a useful campaign idea without spamming people.",
-      "contentType": "`tutorial / tool breakdown`",
-      "why": "It borrows the OpenClaw wave but makes it Braydon: useful, ethical, local-business-first, and easy for Frank to understand."
-    },
-    {
-      "title": "Connect Claude to a visual tool",
-      "tags": [
-        "🌊🔁 wave-ride",
-        "V2",
-        "reframe"
-      ],
-      "about": "Reframe Claude as the front door for visual creation: give it a product photo, brand context, or campaign goal, then connect it to a visual tool to generate the asset. Use a simple before-and-after demo.",
-      "evidence": "Justyn's May 12 Higgsfield MCP + Claude post is at **48.3K views**, **2,166 likes**, **629 shares**, with spoken hook **\"Powerful as Claude is, there's one thing it just can't do until now and that's create high quality images and videos.\"** Braydon's own closest adjacent proof is huge: Claude UGC is **159.2K / 10,169 saves**, Blotato social content is **60.0K**, and Arcads from product link is **18.9K**.",
-      "onScreenTitle": "Claude can now make the visual too",
-      "spokenHook": "Claude is great at thinking through the campaign, but now you can connect it to tools that actually create the visual asset. Here is the simple version.",
-      "contentType": "`tool breakdown / tutorial`",
-      "why": "The audience has already proven they want Claude plus output demos. This gives the same pattern a fresh tool connection and a clear creative payoff."
-    },
-    {
-      "title": "The one context file your AI needs",
-      "tags": [
-        "🌊 wave-ride"
-      ],
-      "about": "Teach the simplest version of a context file: one page that tells AI who you are, what you do, your tone, your offers, your customers, and what good output looks like. Avoid dev language and call it a business briefing sheet.",
-      "evidence": "Taki has two current Claude context/memory posts in the scan: **17.6K views / 226 comments** on a Claude handoff skill with on-screen title **\"The Best Claude Memory Fix With the best Claude Handoff Skill\"**, and **17.1K views / 234 shares** on a context file with on-screen title **\"This One File Will 10X Improve Your AI Outputs Immediately\"**. Both had spoken hooks extracted. Braydon's own skills/context-adjacent posts are lower-view but save-healthy, so this is a useful secondary, not the lock.",
-      "onScreenTitle": "Give AI this one briefing sheet",
-      "spokenHook": "Most people blame AI when the output is bad, but they never gave it the basics. Here is the one-page briefing sheet I would give every business owner.",
-      "contentType": "`quick tip / tutorial`",
-      "why": "It turns a technical Claude.md/context-file trend into a plain-English business habit. It also reinforces Braydon's core belief that AI is leadership and communication."
-    },
-    {
-      "title": "What 300 AI agents actually means",
-      "tags": [
-        "🌊 wave-ride"
-      ],
-      "about": "Use the Kimi K2.6 / 300 parallel agents headline as a teachable moment. Explain that the point is not \"300 robots replacing people\". The point is breaking one big job into smaller jobs that can run at the same time.",
-      "evidence": "NoCode Joshua's Kimi post returned at **49.0K views** with on-screen title **\"China just destroyed every AI 🤯\"** and spoken hook **\"China just did it again and dropped an AI model that competes with ChatGPT and Claude...\"**. This is Frank-borderline if handled as model drama, but strong if Braydon turns it into a delegation lesson.",
-      "onScreenTitle": "300 AI agents sounds crazy. Here is what it means.",
-      "spokenHook": "You do not need 300 AI agents. But this headline points to something every business owner should understand: AI work is moving from one chat to a team of smaller tasks.",
-      "contentType": "`myth-bust / explainer`",
-      "why": "It rides a competitor wave without copying the hype. Braydon can be the calm mentor who translates the trend into a practical leadership lesson."
-    },
-    {
-      "title": "Codex from your phone",
-      "tags": [
-        "📰🔁 news",
-        "V2",
-        "reframe"
-      ],
-      "about": "OpenAI put Codex into the ChatGPT mobile app. Braydon's version should not be developer jargon. Make it about starting, checking, steering, and approving AI work while away from the desk.",
-      "evidence": "Today's early-catch log still has strong official X signal from May 14: OpenAI's Codex mobile post at **20,519 likes**, **4,425 bookmarks**, and **2,135 quotes**. Braydon's own adjacent Claude Code + Codex post is at **12.4K views** with spoken hook **\"You can now use Claude code and Codex together. Watch this.\"**",
-      "onScreenTitle": "Codex can now work from your phone",
-      "spokenHook": "Most people think Codex only matters at a computer, but OpenAI just put it in the ChatGPT mobile app. That means you can check the work and steer it from your phone.",
-      "contentType": "`news / tool breakdown`",
-      "why": "It combines a fresh official product signal with Braydon's active Codex momentum. Keep the demo simple and outcome-based."
-    }
-  ],
+  "date": "2026-05-16",
+  "generatedAt": "2026-05-16T12:42:42.824615+00:00",
+  "publishedAt": "2026-05-16T12:43:19.329406+00:00",
+  "sourceIdeaFile": "/opt/data/hermes-content/tiktok/ideas/2026-05-16-tiktok-ideas.md",
+  "ideas": [],
   "stats": {
     "competitorPosts": 50,
     "handlesCovered": 10,
@@ -87,12 +20,12 @@
       "tony.aube"
     ],
     "missingHandles": [],
-    "titleCoverage": "24/50",
-    "spokenHookCoverage": "16/50",
+    "titleCoverage": "27/50",
+    "spokenHookCoverage": "26/50",
     "recentWindowDays": 10,
     "recentCompetitorPosts": 37,
-    "recentTitleCoverage": "18/37",
-    "recentSpokenHookCoverage": "11/37",
+    "recentTitleCoverage": "20/37",
+    "recentSpokenHookCoverage": "19/37",
     "sourceIdeaSignals": 9,
     "monitoringSignals": 16
   },
@@ -644,7 +577,7 @@
       "text": "Manus is an underrated AI tool that helps you create content and go viral on social media. Comment “Manus” and I’ll send you the link. #manus #ai #manusai #socialmedia #manuspartner",
       "topic": "Manus is an underrated AI tool that helps you create content and go viral on social media. Comment “Manus” and I’ll send you the link. #manus #ai #manusai #socialmedia #manuspartner",
       "onScreenTitle": "",
-      "spokenHook": "",
+      "spokenHook": "Most people don't know that you don't need to write your own content ideas or scripts to go viral. In fact, there are really good AI tools that can help you go viral and study social media to figure out what's working.",
       "playCount": 727,
       "diggCount": 26,
       "commentCount": 6,
@@ -662,7 +595,7 @@
       "text": "I gained 300K+ followers in less than one year with Claude + Content Engine 🤯 This is how you scale your businesses marketing and distribution! Comment “Content” or book some time with me using my link in bio to get this exact same Content Engine built setup for your business. #claudecode #claude #marketing #aiforbusiness #socialmediagrowth",
       "topic": "I gained 300K+ followers in less than one year with Claude + Content Engine 🤯 This is how you scale your businesses marketing and distribution! Comment “Content” or book some time with me using my link in bio to get this exact same Content Engine built setup for your business. #claudecode #claude #marketing #aiforbusiness #socialmediagrowth",
       "onScreenTitle": "",
-      "spokenHook": "",
+      "spokenHook": "Claud code and my own AI content engine just completely replaced social media managers. Let me show you how to easily set this up and the exact improvements that it's making for my distribution, my marketing and improving my businesses revenue.",
       "playCount": 728,
       "diggCount": 37,
       "commentCount": 1,
@@ -696,8 +629,8 @@
       "creator": "taki.gpt",
       "date": "2026-05-12",
       "text": "Comment “CLAUDE” to get the best Claude optimization and setup guide on the internet. Boris Cherny created Claude Code and he just shared 10 tips on how he uses it. Here are the key takeaways. First, always start with Plan Mode. Do this before any code. Just press Shift+Tab to turn it on. Iterate on your plan. Make it perfect. This stops many errors later. Think of it like drawing a map first. Second, run multiple Claude Code sessions. Use each for a different project part. Then merge them at the end. Let AI do the merge. You finish projects three to five times faster. It’s like having extra hands working at once. Third, the agent makes a mistake? Tell it to update its own claude.md file. Do this every time. It learns. The same mistake won’t happen again. Simple as fixing a recipe note. Fourth, build sub-agents. Use them to automate your work. One agent writes code. Another reviews it. A third deploys it. They all run on their own. Picture a team passing a baton smoothly. The good news? These tips fit any workflow. Because anytime Claude helps with one part, it speeds up the rest: #borischerny #claudeai #claudecode #claudetips #aitipsandtricks",
-      "topic": "Comment “CLAUDE” to get the best Claude optimization and setup guide on the internet. Boris Cherny created Claude Code and he just shared 10 tips on how he uses it. Here are the key takeaways. First, always start with Plan Mode. Do this before any code. Just press Shift+Tab to turn it on. Iterate on your plan. Make it perfect. This stops many errors later. Think of it like drawing a map first. Second, run multiple Claude Code sessions. Use each for a different project part. Then merge them at the end. Let AI do the merge. You finish projects three to five times faster. It’s like having extra hands working at once. Third, the agent makes a mistake? Tell it to update its own claude.md file. Do this every time. It learns. The same mistake won’t happen again. Simple as fixing a recipe note. Fourth, build sub-agents. Use them to automate your work. One agent writes code. Another reviews it. A third deploys it. They all run on their own. Picture a team passing a baton smoothly. The good news? These tips fit any workflow. Because anytime Claude helps with one part, it speeds up the rest: #borischerny #claudeai #claudecode #claudetips #aitipsandtricks",
-      "onScreenTitle": "",
+      "topic": "10 Pro Tips for Claude Code / From the creator of Claude Code!",
+      "onScreenTitle": "10 Pro Tips for Claude Code / From the creator of Claude Code!",
       "spokenHook": "The creator of Claude Code Boris Cherny just dropped 10 tips on how he uses Claude Code and here are the key takeaways I've personally tried all of them and I'll show you the top five of his tips if you want to get the most out of Claude and stay till the end because the last one is definitely the most impactful and if you like this sort of content and you want to get the most out of your a I experience make sure that you give me a follow tip number one is that he runs multiple Claude agents in parallel inside of his terminal and inside of the Claude desktop app it self and running multiple agents is useful because you can have each agent take care of specific responsibilities like one for coding one for testing one for design one for iteration and one for review tip No. 2 is he uses a shared Claude MD file which is basically a context file that teaches Claude everything about who he is, how he gets work done, his business etc and when you share that with your entire team everybody then has access to that same context so the results that they're gonna create are gonna be similar tip No.",
       "playCount": 10100,
       "diggCount": 322,
@@ -734,7 +667,7 @@
       "text": "Exposing insane AI playbooks (part 1) Steal Emily Higgins playbook on she is using cinematic AI visuals tastefully to become the fastest growing creator in the space #aitools",
       "topic": "Exposing insane AI playbooks (part 1) Steal Emily Higgins playbook on she is using cinematic AI visuals tastefully to become the fastest growing creator in the space #aitools",
       "onScreenTitle": "",
-      "spokenHook": "",
+      "spokenHook": "No one knows how Emily's actually using the AI to create these cinematic visuals that are generating millions of views. But that changes today.",
       "playCount": 3801,
       "diggCount": 194,
       "commentCount": 1,
@@ -752,7 +685,7 @@
       "text": "AI in Android can do what Apple wished Siri could (latest AI updates from Google’s Android Show today) #ai #googlegemini",
       "topic": "AI in Android can do what Apple wished Siri could (latest AI updates from Google’s Android Show today) #ai #googlegemini",
       "onScreenTitle": "",
-      "spokenHook": "",
+      "spokenHook": "So Google just dropped bunch of updates at the Android show today Here are the top 3 updates that changes how we use our devices No. 1, personal intelligence integrates with multi step workflows on your phones.",
       "playCount": 6229,
       "diggCount": 195,
       "commentCount": 6,
@@ -788,7 +721,7 @@
       "text": "3 wildest things I found after reading Microsoft’s 2026 Work Index Report #aitools #aiadoption #digitalsamaritan #greenscreen",
       "topic": "AFTER READING MICROSOFT'S",
       "onScreenTitle": "AFTER READING MICROSOFT'S",
-      "spokenHook": "",
+      "spokenHook": "Only 13% of AI users are actually rewarded for reinventing the work with ai even when organisations are explicitly trying to adopt ai And this is one of the 3 wildest insights I found after reading Microsoft's annual Work Trend Index report. No.",
       "playCount": 1687,
       "diggCount": 47,
       "commentCount": 5,
@@ -806,7 +739,7 @@
       "text": "Gamma just unlocked beast mode for AI presentations #aitools #learnai #digitalsamaritan #gammapartner",
       "topic": "Gamma just unlocked beast mode for AI presentations",
       "onScreenTitle": "Gamma just unlocked beast mode for AI presentations",
-      "spokenHook": "",
+      "spokenHook": "If you go to chat Gpt and then apps you will now see gamma as an app you can add But there's more to it Now if I ask Chat GPt to create a presentation using gamma like how should I be using AI more effectively?",
       "playCount": 6703,
       "diggCount": 171,
       "commentCount": 6,
@@ -858,9 +791,9 @@
       "creator": "brandnat",
       "date": "2026-05-04",
       "text": "Noone knows this secret hack in Codex! Free voice to text across all your apps so you can talk to AI anywhere! #codex #chatgpt #openai #brandnat",
-      "topic": "Noone knows this secret hack in Codex! Free voice to text across all your apps so you can talk to AI anywhere! #codex #chatgpt #openai #brandnat",
-      "onScreenTitle": "",
-      "spokenHook": "",
+      "topic": "SECRET CODEX HACK: FREE VOICE 2 TEXT ANY APP",
+      "onScreenTitle": "SECRET CODEX HACK: FREE VOICE 2 TEXT ANY APP",
+      "spokenHook": "Did you know there's a hack inside of Chat GPT's Codex where if you pay for those voice to text apps like whisperflow or Voice Inc, you can actually get it for free if you have Codex, the inside of Codex, go into your settings, go to general and scroll down to dictation. Over here you can set your shortcut.",
       "playCount": 8530,
       "diggCount": 263,
       "commentCount": 16,
@@ -896,7 +829,7 @@
       "text": "",
       "topic": "",
       "onScreenTitle": "",
-      "spokenHook": "",
+      "spokenHook": "Stop asking which is the best AI video generator? Come closer.",
       "playCount": 6187,
       "diggCount": 196,
       "commentCount": 17,
@@ -950,7 +883,7 @@
       "text": "Here’s how to revive the Instagram saves graveyard #ai #claudecode #codex #instagram #aihacks",
       "topic": "Here’s how to revive the Instagram saves graveyard #ai #claudecode #codex #instagram #aihacks",
       "onScreenTitle": "",
-      "spokenHook": "",
+      "spokenHook": "This button might be the most pointless Instagram feature unless you use it the way that I do because instead of all those posts going to the graveyard never to be looked at again, I set it up so everything automatically gets logged inside of notion, which means you can actually do something with all these save posts instead of losing them forever. Save this cause I'm gonna show you how.",
       "playCount": 1715,
       "diggCount": 51,
       "commentCount": 29,
@@ -984,9 +917,9 @@
       "creator": "justyn.ai",
       "date": "2026-05-11",
       "text": "These prompts are CRAZY 🤯 #ai #aiimages #chatgpt #chatgpttips #chatgpthacks",
-      "topic": "These prompts are CRAZY 🤯 #ai #aiimages #chatgpt #chatgpttips #chatgpthacks",
-      "onScreenTitle": "",
-      "spokenHook": "",
+      "topic": "5300+ ChatGPT Image prompts 🤯",
+      "onScreenTitle": "5300+ ChatGPT Image prompts 🤯",
+      "spokenHook": "Chat GBT's new image model just killed Photoshop in Canada because this is by far the best AI image model right now. And here are hundreds of different prompts that you can use to create anything from ads to editorial images to watercolors to transparent PNGs to insanely detailed art.",
       "playCount": 8182,
       "diggCount": 267,
       "commentCount": 204,
@@ -1542,18 +1475,6 @@
   ],
   "performance": [
     {
-      "title": "Top performer",
-      "detail": "Top performer: Claude UGC at 159.2K views, 7,596 likes, 84 comments, 1,982 shares, and 10,169 saves. Cached layers: on-screen title \"Claude can make UGC Videos 🤯🤯🤯\" and spoken hook \"Claude can now make UGC videos. Watch this.\""
-    },
-    {
-      "title": "Other strong proof",
-      "detail": "Other strong proof: Claude plus Blotato at 60.0K / 3,646 saves, Claude Dreams at 37.9K / 1,181 saves, product-link ad at 18.9K / 915 saves, Free Claude Courses at 17.3K / 1,118 saves, and Claude Code plus Codex at 12.4K."
-    },
-    {
-      "title": "Pattern",
-      "detail": "Pattern: Concrete demos with visible output are the safest plays. News can work when it is tied to a demo or an obvious operator payoff."
-    },
-    {
       "title": "Claude can make UGC Videos 🤯🤯🤯",
       "detail": "159,200 views · 10,169 saves · 1,982 shares"
     },
@@ -1574,27 +1495,6 @@
       "detail": "17,300 views · 1,118 saves · 462 shares"
     }
   ],
-  "news": [
-    {
-      "status": "OpenClaw local prospecting",
-      "text": "OpenClaw local prospecting: added to early-catch log as a fresh TikTok receipt. Best used as a Braydon-style local-business workflow, not a side-hustle hype post.",
-      "date": ""
-    },
-    {
-      "status": "Kimi K2.6 / 300 parallel agents",
-      "text": "Kimi K2.6 / 300 parallel agents: added to early-catch log. Strong hook, Frank-borderline topic. Use as a calm explainer if shipped.",
-      "date": ""
-    },
-    {
-      "status": "Codex in ChatGPT mobile",
-      "text": "Codex in ChatGPT mobile: still good as a news slot because official X signal is strong and Braydon has a 12.4K adjacent post.",
-      "date": ""
-    },
-    {
-      "status": "ChatGPT personal finance preview",
-      "text": "ChatGPT personal finance preview: still a back-pocket plain-English news idea from the earlier run today, but current competitor evidence points more strongly to OpenClaw/Claude visual workflows.",
-      "date": ""
-    }
-  ],
-  "briefMarkdown": "*Generated: May 15, 2026 at 3:38 PM MT*\n\n---\n\n# TikTok Ideas, May 15, 2026, Daily Success Scan refresh\n\n**Strategist read.** Fresh Braydon scrape returned **30 recent posts** and the full competitor Daily Success Scan returned **50 competitor posts across all 10 handles**. This is a stronger read than the earlier degraded scan today. The account is still telling the same story: concrete business-output demos are beating abstract news. Braydon's strongest recent proof is Claude UGC at **159.2K views / 10,169 saves / 1,982 shares**, Claude plus Blotato at **60.0K / 3,646 saves**, Claude Dreams at **37.9K / 1,181 saves**, and Claude Code plus Codex at **12.4K**. Competitor scan shows a live OpenClaw and agent-team cluster, plus a smaller but useful Claude memory/context-file cluster.\n\n**Recommended posting order:**\n1. **Lock slot: Turn one local-business lead into a campaign.** Best fresh wave plus Braydon's local-business credibility.\n2. **Secondary: Connect Claude to a visual tool.** Stacks Justyn's 48.3K Higgsfield post with Braydon's 159.2K UGC proof.\n3. **Backup: The one context file your AI needs.** Competitor proof is smaller but clean and very teachable.\n4. **News slot if needed: Codex from your phone.** Still earned by official X signal from today's early-catch log plus Braydon's 12.4K Codex/Claude Code post.\n\n---\n\n## Idea 1: Turn one local-business lead into a campaign\n\n`🌊🔁 wave-ride + V2/reframe`\n\n- **What it's about:** Show a calm, ethical local-business version of the OpenClaw prospecting wave: find one public lead, identify a real marketing gap, mock up a useful offer, and draft a human outreach message. Keep it positioned as a workflow demo, not a get-rich-quick side hustle.\n- **Evidence:** Full competitor scan surfaced Marcin's May 12 OpenClaw + Google Maps contractor outreach post at **15.3K views** with complete hook layers: on-screen title **\"Openclaw + Google + Ai = $$$$ / Easy $10K a month\"** and spoken hook **\"Openclaw plus a clever guy using construction to make serious cash...\"**. Braydon's own local-business and visual-output demos are strong: Claude UGC is **159.2K**, Arcads/product-link ad is **18.9K**, and Claude website build is **5.5K**.\n- **On-screen title:** \"AI can find local leads for you\"\n- **Spoken hook:** \"If you run a local service business, this is how AI can help you find one real lead and turn it into a useful campaign idea without spamming people.\"\n- **Content type:** `tutorial / tool breakdown`\n- **Why this should work:** It borrows the OpenClaw wave but makes it Braydon: useful, ethical, local-business-first, and easy for Frank to understand.\n\n---\n\n## Idea 2: Connect Claude to a visual tool\n\n`🌊🔁 wave-ride + V2/reframe`\n\n- **What it's about:** Reframe Claude as the front door for visual creation: give it a product photo, brand context, or campaign goal, then connect it to a visual tool to generate the asset. Use a simple before-and-after demo.\n- **Evidence:** Justyn's May 12 Higgsfield MCP + Claude post is at **48.3K views**, **2,166 likes**, **629 shares**, with spoken hook **\"Powerful as Claude is, there's one thing it just can't do until now and that's create high quality images and videos.\"** Braydon's own closest adjacent proof is huge: Claude UGC is **159.2K / 10,169 saves**, Blotato social content is **60.0K**, and Arcads from product link is **18.9K**.\n- **On-screen title:** \"Claude can now make the visual too\"\n- **Spoken hook:** \"Claude is great at thinking through the campaign, but now you can connect it to tools that actually create the visual asset. Here is the simple version.\"\n- **Content type:** `tool breakdown / tutorial`\n- **Why this should work:** The audience has already proven they want Claude plus output demos. This gives the same pattern a fresh tool connection and a clear creative payoff.\n\n---\n\n## Idea 3: The one context file your AI needs\n\n`🌊 wave-ride`\n\n- **What it's about:** Teach the simplest version of a context file: one page that tells AI who you are, what you do, your tone, your offers, your customers, and what good output looks like. Avoid dev language and call it a business briefing sheet.\n- **Evidence:** Taki has two current Claude context/memory posts in the scan: **17.6K views / 226 comments** on a Claude handoff skill with on-screen title **\"The Best Claude Memory Fix With the best Claude Handoff Skill\"**, and **17.1K views / 234 shares** on a context file with on-screen title **\"This One File Will 10X Improve Your AI Outputs Immediately\"**. Both had spoken hooks extracted. Braydon's own skills/context-adjacent posts are lower-view but save-healthy, so this is a useful secondary, not the lock.\n- **On-screen title:** \"Give AI this one briefing sheet\"\n- **Spoken hook:** \"Most people blame AI when the output is bad, but they never gave it the basics. Here is the one-page briefing sheet I would give every business owner.\"\n- **Content type:** `quick tip / tutorial`\n- **Why this should work:** It turns a technical Claude.md/context-file trend into a plain-English business habit. It also reinforces Braydon's core belief that AI is leadership and communication.\n\n---\n\n## Idea 4: What 300 AI agents actually means\n\n`🌊 wave-ride`\n\n- **What it's about:** Use the Kimi K2.6 / 300 parallel agents headline as a teachable moment. Explain that the point is not \"300 robots replacing people\". The point is breaking one big job into smaller jobs that can run at the same time.\n- **Evidence:** NoCode Joshua's Kimi post returned at **49.0K views** with on-screen title **\"China just destroyed every AI 🤯\"** and spoken hook **\"China just did it again and dropped an AI model that competes with ChatGPT and Claude...\"**. This is Frank-borderline if handled as model drama, but strong if Braydon turns it into a delegation lesson.\n- **On-screen title:** \"300 AI agents sounds crazy. Here is what it means.\"\n- **Spoken hook:** \"You do not need 300 AI agents. But this headline points to something every business owner should understand: AI work is moving from one chat to a team of smaller tasks.\"\n- **Content type:** `myth-bust / explainer`\n- **Why this should work:** It rides a competitor wave without copying the hype. Braydon can be the calm mentor who translates the trend into a practical leadership lesson.\n\n---\n\n## Idea 5: Codex from your phone\n\n`📰🔁 news + V2/reframe`\n\n- **What it's about:** OpenAI put Codex into the ChatGPT mobile app. Braydon's version should not be developer jargon. Make it about starting, checking, steering, and approving AI work while away from the desk.\n- **Evidence:** Today's early-catch log still has strong official X signal from May 14: OpenAI's Codex mobile post at **20,519 likes**, **4,425 bookmarks**, and **2,135 quotes**. Braydon's own adjacent Claude Code + Codex post is at **12.4K views** with spoken hook **\"You can now use Claude code and Codex together. Watch this.\"**\n- **On-screen title:** \"Codex can now work from your phone\"\n- **Spoken hook:** \"Most people think Codex only matters at a computer, but OpenAI just put it in the ChatGPT mobile app. That means you can check the work and steer it from your phone.\"\n- **Content type:** `news / tool breakdown`\n- **Why this should work:** It combines a fresh official product signal with Braydon's active Codex momentum. Keep the demo simple and outcome-based.\n\n---\n\n## Research Notes\n\n### Braydon performance snapshot\n\n- **Top performer:** Claude UGC at **159.2K views**, **7,596 likes**, **84 comments**, **1,982 shares**, and **10,169 saves**. Cached layers: on-screen title **\"Claude can make UGC Videos 🤯🤯🤯\"** and spoken hook **\"Claude can now make UGC videos. Watch this.\"**\n- **Other strong proof:** Claude plus Blotato at **60.0K / 3,646 saves**, Claude Dreams at **37.9K / 1,181 saves**, product-link ad at **18.9K / 915 saves**, Free Claude Courses at **17.3K / 1,118 saves**, and Claude Code plus Codex at **12.4K**.\n- **Pattern:** Concrete demos with visible output are the safest plays. News can work when it is tied to a demo or an obvious operator payoff.\n\n### Competitor scan highlights\n\n| Creator | Posted | Views | Likes | Comments | Shares | On-screen title | Spoken hook | Angle | Layer status |\n|---|---|---:|---:|---:|---:|---|---|---|---|\n| rileybrown.ai | Feb 17 06:51 PM MT | 699,900 | 23,300 | 321 | 3,707 | Openclaw (Clawdbot) Controls Blender | Oh my God, Openclaw... can now control blender. | OpenClaw controls Blender | title, spoken |\n| brandnat | May 12 08:15 AM MT | 266,100 | 18,200 | 977 | 4,094 | One person companies that feel like you hired 23 roles | Open sourced project for one person companies that feel like you just hired for 23 roles. | one-person company stack | cached title, spoken |\n| nocode.joshua | May 9 12:40 PM MT | 49,000 | 349 | 50 | 35 | China just destroyed every AI 🤯 | China just did it again and dropped an AI model that competes with ChatGPT and Claude... | Kimi K2.6 / 300 agents | title, spoken |\n| justyn.ai | May 12 09:53 AM MT | 48,300 | 2,166 | 121 | 629 | Connect Higgsfield to Claude 🤯🤯🤯 | Powerful as Claude is, there's one thing it just can't do until now... | Claude plus visual generation | cached title, spoken |\n| taki.gpt | May 14 09:00 AM MT | 17,600 | 442 | 226 | 114 | The Best Claude Memory Fix With the best Claude Handoff Skill | Claude forgets everything after the first 20 messages. Here's the fastest fix... | Claude handoff/memory | title, spoken |\n| taki.gpt | May 11 09:00 AM MT | 17,100 | 528 | 107 | 234 | This One File Will 10X Improve Your AI Outputs Immediately | Before you use Claude or any AI system, make sure that you have this one file in place... | context file | title, spoken |\n| sabrina_ramonov | May 14 12:43 PM MT | 16,200 | 657 | 98 | 136 | ChatGPT can reveal your secrets 😳 | What happens when you ask ChatGPT to reveal everything that it knows about you? | prompt/self-reflection | title, spoken |\n| marcinteodoru | May 12 08:25 PM MT | 15,300 | 415 | 8 | 80 | Openclaw + Google + Ai = $$$$ / Easy $10K a month | Openclaw plus a clever guy using construction to make serious cash... | contractor lead workflow | title, spoken |\n| digitalsamaritan | May 12 01:11 PM MT | 14,900 | 405 | 17 | 24 | Google just re-invented 50 year old tech we use everyday | Google just reinvented a 50 year technology we use everyday... | Gemini pointer interface | cached title, spoken |\n\n**Competitor pattern read:** OpenClaw is the broadest competitor cluster, but some of Riley's largest OpenClaw posts are old and should be treated as topic proof, not fresh daily urgency. The freshest useful posts are Marcin's local prospecting workflow, Justyn's Claude + Higgsfield visual workflow, Joshua's Kimi agents explainer, and Taki's Claude context/memory pair.\n\n### Early-catch opportunities\n\n- **OpenClaw local prospecting:** added to early-catch log as a fresh TikTok receipt. Best used as a Braydon-style local-business workflow, not a side-hustle hype post.\n- **Kimi K2.6 / 300 parallel agents:** added to early-catch log. Strong hook, Frank-borderline topic. Use as a calm explainer if shipped.\n- **Codex in ChatGPT mobile:** still good as a news slot because official X signal is strong and Braydon has a 12.4K adjacent post.\n- **ChatGPT personal finance preview:** still a back-pocket plain-English news idea from the earlier run today, but current competitor evidence points more strongly to OpenClaw/Claude visual workflows.\n\n---\n\n## Run notes and limitations\n\n- TikTok metrics scrape success: Braydon scrape returned **30 items**. Competitor scrape returned **50 items across all 10 handles**: `brandnat`, `digitalsamaritan`, `justyn.ai`, `marcinteodoru`, `nocode.joshua`, `rileybrown.ai`, `sabrina_ramonov`, `taki.gpt`, `the.rachelwoods`, `tony.aube`.\n- Braydon hook coverage for returned items: **30/30 on-screen titles** and **30/30 spoken hooks** available from cache or WebVTT extraction. One new cover OCR was attempted and cached.\n- Competitor evidence coverage for returned items: **24/50 on-screen titles** and **16/50 spoken hooks** available from cache or extraction. For the posts used as evidence above, title and spoken-hook layers were attempted and cached or already available.\n- Caption-derived first-words proxies: not used as spoken-hook proof in the final ideas. Items without extracted/cached spoken hooks are treated as caption/performance signals only.\n- Known limitation: several competitor results are older posts despite latest sorting, especially Riley and Tony. I used those as pattern proof only and weighted newer May 12 to May 14 posts more heavily for recommendations.\n"
+  "news": [],
+  "briefMarkdown": "# TikTok Ideas, May 16, 2026\n\nGenerated: May 16, 2026 at 6:42 AM MT\n\nSource of truth: Hermes-native workspace at `/opt/data/hermes-content/tiktok/`.\n\n## Best ideas for today\n\n**Claude can make the image asset now** `🌊🔁 V2/reframe`\n- **What it's about:** Turn the Higgsfield/Claude concept into a practical business-output demo, not just a tool announcement. Example: ask Claude to plan a local coffee shop promo, then connect Higgsfield to create the hero image or short visual.\n- **Evidence:** Braydon's May 15 Higgsfield post is already the strongest new own-account signal from this scrape: 26.5K views, 1,287 saves, 297 shares. Justyn's Higgsfield MCP + Claude post is also a competitor wave at 51.6K views, 3,000 saves, 665 shares.\n- **On-screen title:** Claude can make the visual now\n- **Spoken hook:** Claude used to help you think through the campaign. Now it can help create the image too, and this is where it gets useful for real businesses.\n- **Content type:** tool breakdown / tutorial\n- **Why this should work:** It combines Braydon's current winner with a recent competitor wave, and it keeps the angle grounded in a visible output instead of abstract AI news.\n\n**One-person company, but make it useful** `🌊 news-adjacent`\n- **What it's about:** Explain the one-person-company agent stack trend through a concrete operator lens: one person can research, draft, design, follow up, and measure with AI as leverage. Avoid promising replacement. Frame it as AI extending the business owner's expertise.\n- **Evidence:** brandnat's recent GStack/Y-Combinator post is the biggest competitor signal in today's scan: 270.5K views, 18.5K likes, 984 comments, 4,199 shares, 21,784 saves. Caption: open-source project for one-person companies that feels like hiring 23 roles.\n- **On-screen title:** One person, 23 AI helpers\n- **Spoken hook:** This does not mean one person replaces a whole team. It means one smart operator can finally get help with the parts that used to slow them down.\n- **Content type:** hot take / tool breakdown\n- **Why this should work:** The topic has huge current competitor proof, but Braydon can make it warmer and clearer by translating the hype into a practical mentor-style framework.\n\n**The context file your AI keeps missing** `🌊🔁 V2/reframe`\n- **What it's about:** Show a simple `CLAUDE.md` or context handoff file that tells an AI who the audience is, what the brand voice is, what not to say, and what the desired output looks like.\n- **Evidence:** Taki's Claude memory/handoff post from May 14 hit 21.9K views, 766 saves, and 288 comments. Braydon's own Claude education cluster is still strong: Claude Dreams at 38.2K, Claude free courses at 18.4K, and Claude + Codex together at 20.9K.\n- **On-screen title:** Your AI needs a context file\n- **Spoken hook:** If your AI keeps giving you generic answers, the problem might not be the tool. It might be the context you forgot to give it.\n- **Content type:** quick tip / tutorial\n- **Why this should work:** Saves and comments are high on context-memory content, and Braydon can make the workflow beginner-friendly without dumbing it down.\n\n**Turn prompts into a business asset library** `🌊🔁 V2/reframe`\n- **What it's about:** Instead of dumping 5,000 image prompts, show how to create a small reusable prompt library for one business: product photo, event flyer, testimonial graphic, email header, and social post.\n- **Evidence:** Justyn's ChatGPT image-prompt post is a current monitoring signal at 8.4K views with 253 saves and 207 comments. Braydon's own ChatGPT flyers post reached 11.5K views and 307 saves, and his real-estate image post reached 7.7K views and 197 saves.\n- **On-screen title:** Stop saving random prompts\n- **Spoken hook:** A giant prompt list is cool, but a small prompt library for your actual business is way more useful.\n- **Content type:** tutorial / myth-bust\n- **Why this should work:** Prompt-library content is getting comments, but Braydon's stronger angle is turning it into a usable business system.\n\n## Quick posting recommendation\n\n1. Post the Claude visual asset workflow first. It is the clearest current winner because Braydon's own Higgsfield post is already moving.\n2. Use the one-person-company agent stack as the second slot if you want a bigger trend piece.\n3. Keep the context-file idea as a reliable educational backup.\n\n## Research notes\n\n- **Braydon performance:** Latest scrape returned 30 recent posts. Top recent performers are Claude UGC at 163.3K, Claude + Blotato at 60.9K, Claude Dreams at 38.2K, today's Claude/Higgsfield visual post at 26.5K, and Claude + Codex together at 20.9K.\n- **Competitor wave:** The biggest clean signal is brandnat's one-person-company/GStack post at 270.5K views. Other current useful signals: Justyn's Higgsfield/Claude post at 51.6K, Taki's Claude memory handoff post at 21.9K, Taki's Claude Code tips post at 10.3K, and Digital Samaritan's Google AI post at 15.1K, though the Google item was marked as an ad by the scraper and should be treated as pattern context only.\n- **News/early catch:** Fast X scan ran, but no stronger official AI launch displaced the TikTok performance signals. Today's recommendations are mainly wave-ride plus V2/reframe, not pure news.\n\n## Extraction and coverage check\n\n- **Braydon scrape metrics:** Success, 30 latest non-pinned posts returned.\n- **Competitor scrape metrics:** Success, 50 posts returned across all 10 configured handles: sabrina_ramonov, rileybrown.ai, tony.aube, the.rachelwoods, nocode.joshua, marcinteodoru, taki.gpt, digitalsamaritan, brandnat, justyn.ai.\n- **On-screen titles:** Existing cache plus this run covered all idea-evidence posts. New cover OCR was completed for Braydon's Higgsfield post and three uncached competitor covers. Some lower-priority scan items remain caption/performance-only in the report.\n- **Spoken hooks:** WebVTT/subtitle extraction was available for most cached/evidence posts. Braydon's newest Higgsfield scrape had missing subtitle links in the asset helper, so its spoken-hook layer is unavailable in this run and should be treated as caption/performance evidence plus cover-title evidence.\n- **Paid transcription:** Disabled. No paid TikTok transcription add-on was used.\n\n## Saved artifacts\n\n- Daily idea file: `/opt/data/hermes-content/tiktok/ideas/2026-05-16-tiktok-ideas.md`\n- Hook cache updated: `/opt/data/hermes-content/tiktok/data/tiktok-hooks-cache.json`\n- Asset manifests: `/tmp/braydon_extract_manifest.json`, `/tmp/competitor_extract_manifest.json`\n"
 }

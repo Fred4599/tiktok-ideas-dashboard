@@ -109,13 +109,21 @@ footer { color:var(--muted-2); font-size:12px; display:flex; justify-content:spa
 }
 
 @media (max-width: 620px) {
-  .nav { height:58px; }
-  .quick-nav { top:58px; }
-  .brand { font-size:15px; }
-  .brand-dot { width:9px; height:9px; }
-  .nav-links { gap:8px; }
-  .nav-links a { font-size:12px; }
-  .nav-links a[href="#competitors"] { display:none; }
+  .nav {
+    height:58px;
+    margin: 0 calc(50% - 50vw);
+    padding: 0 max(12px, env(safe-area-inset-right)) 0 max(12px, env(safe-area-inset-left));
+    width: auto;
+  }
+  .quick-nav {
+    top:58px;
+    margin: 0 calc(50% - 50vw);
+    padding: 9px 12px;
+    width: auto;
+  }
+  .brand { font-size:15px; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .brand-dot { width:9px; height:9px; flex:0 0 auto; }
+  .nav-links { display:none; }
   .ideas-grid { display:flex; overflow-x:auto; gap:12px; margin:0 -12px; padding:0 12px 8px; scroll-snap-type:x mandatory; scrollbar-width:none; }
   .ideas-grid::-webkit-scrollbar { display:none; }
   .idea-card { flex:0 0 min(88vw, 360px); min-height: auto; scroll-snap-align:start; }

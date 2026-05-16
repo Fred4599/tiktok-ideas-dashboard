@@ -1,6 +1,6 @@
 const fmt = new Intl.NumberFormat('en-US');
 const get = id => document.getElementById(id);
-let state = { latest: null, creator: 'all' };
+let state = { latest: null, creator: 'all', signal: 'source' };
 
 function escapeHtml(value = '') {
   return String(value).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
@@ -64,17 +64,35 @@ function renderIdeas() {
     </article>
   `).join('');
 }
-function renderCreatorFilter() {
+function renderFilters() {
   const creators = ['all', ...Array.from(new Set(state.latest.competitors.map(x => x.creator))).sort()];
   get('creatorFilter').innerHTML = creators.map(c => `<option value="${escapeHtml(c)}">${c === 'all' ? 'All creators' : escapeHtml(c)}</option>`).join('');
   get('creatorFilter').value = state.creator;
   get('creatorFilter').addEventListener('change', e => { state.creator = e.target.value; renderCompetitors(); });
+
+  const signalOptions = [
+    ['source', 'Doing well · 10K+'],
+    ['monitor', 'Monitoring · 2K-10K'],
+    ['all', 'All recent posts'],
+    ['low', 'Under 2K'],
+  ];
+  get('signalFilter').innerHTML = signalOptions.map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
+  get('signalFilter').value = state.signal;
+  get('signalFilter').addEventListener('change', e => { state.signal = e.target.value; renderCompetitors(); });
+}
+function passesSignalFilter(item) {
+  const views = item.playCount || 0;
+  if (state.signal === 'source') return views >= 10000;
+  if (state.signal === 'monitor') return views >= 2000 && views < 10000;
+  if (state.signal === 'low') return views < 2000;
+  return true;
 }
 function renderCompetitors() {
   let items = state.latest.competitors.slice();
   if (state.creator !== 'all') items = items.filter(x => x.creator === state.creator);
-  const recentItems = recentWindowItems(items, 10);
+  const recentItems = recentWindowItems(items, 10).filter(passesSignalFilter);
   recentItems.sort((a, b) => {
+    if (state.signal !== 'all') return (b.playCount || 0) - (a.playCount || 0) || String(b.date || '').localeCompare(String(a.date || ''));
     const dateDiff = String(b.date || '').localeCompare(String(a.date || ''));
     return dateDiff || ((b.playCount || 0) - (a.playCount || 0));
   });
@@ -92,7 +110,7 @@ function renderCompetitors() {
       ${item.spokenHook ? `<div class="label">Hook</div><div class="hook">${escapeHtml(item.spokenHook)}</div>` : ''}
       ${item.webVideoUrl ? `<a href="${escapeHtml(item.webVideoUrl)}" target="_blank" rel="noopener">Open TikTok →</a>` : ''}
     </article>`;
-  }).join('') || '<p>No competitor posts from the last 10 days for this filter. Older high-view posts are intentionally hidden so they do not look like current viral signals.</p>';
+  }).join('') || '<p>No competitor posts match this filter in the last 10 days. Try All recent posts or another creator.</p>';
 }
 function renderPerformance() {
   const p = state.latest.performance || [];
@@ -113,7 +131,7 @@ function renderBrief() {
 function render() {
   renderHero();
   renderIdeas();
-  renderCreatorFilter();
+  renderFilters();
   renderCompetitors();
   renderPerformance();
   renderNews();

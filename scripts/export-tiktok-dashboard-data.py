@@ -69,7 +69,7 @@ def parse_ideas(markdown: str) -> list[dict]:
         return []
 
     section = section_match.group(1).strip()
-    pattern = re.compile(r'(?:^|\n)\*\*([^\n*]+?)\*\*\s*(`[^`]+`)?\n')
+    pattern = re.compile(r'(?:^|\n)\*\*([^\n*]+?)\*\*[^\n]*\n')
     matches = list(pattern.finditer(section))
     for i, match in enumerate(matches):
         title = match.group(1)

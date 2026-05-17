@@ -1,9 +1,22 @@
 {
   "date": "2026-05-17",
   "generatedAt": "2026-05-17T12:39:01.188312+00:00",
-  "publishedAt": "2026-05-17T12:39:34.696660+00:00",
+  "publishedAt": "2026-05-17T12:40:04.614290+00:00",
   "sourceIdeaFile": "/opt/data/hermes-content/tiktok/ideas/2026-05-17-tiktok-ideas.md",
   "ideas": [
+    {
+      "title": "Claude is becoming the creative department",
+      "tags": [
+        "🔁 V2",
+        "reframe"
+      ],
+      "about": "Turn yesterday's Claude plus Higgsfield/image momentum into a simple business demo: Claude creates the campaign brief, image asset, and cartoon/video variation for a real small business.",
+      "evidence": "Braydon's May 15 Claude plus Higgsfield post is now at 95.8K views, up from 26.5K in the prior brief, with the newer Claude cartoon video already at 27.9K views, 1,098 likes, and 309 shares from May 16 night MT. Justyn's Higgsfield MCP plus Claude post is still a strong wave signal at 57.3K views.",
+      "onScreenTitle": "Claude is your creative department now",
+      "spokenHook": "Claude used to help you plan the campaign. Now it can help make the image, the cartoon, and the video, so let me show you what this means for a real business.",
+      "contentType": "tool breakdown",
+      "why": "The evidence is directly from Braydon's own account, and the current winner is the most practical Claude creative workflow in the last 48 hours."
+    },
     {
       "title": "The 10 finance agents your accountant should know about",
       "tags": [
@@ -15,6 +28,30 @@
       "spokenHook": "This does not mean Claude replaces your accountant. It means small business owners can finally ask better questions before the meeting.",
       "contentType": "tutorial",
       "why": "This is the clearest fresh 10K+ competitor wave from the daily scan, but Braydon can make it safer, more practical, and more human than the competitor's replacement framing."
+    },
+    {
+      "title": "Move from ChatGPT to Claude without starting over",
+      "tags": [
+        "🌊 wave-ride"
+      ],
+      "about": "Show the simple memory/context handoff path between tools, then reframe it as a business continuity workflow: your AI should remember your brand, customers, offers, and constraints.",
+      "evidence": "Sabrina Ramonov's May 16 ChatGPT to Claude migration post has 28.1K views, and her spoken hook was extracted: \"Here's how to move from ChatGPT to Claude in four simple clicks.\" Taki's Claude handoff/memory post is still performing at 26.3K views with 960 saves and 343 comments.",
+      "onScreenTitle": "Move your ChatGPT brain to Claude",
+      "spokenHook": "If you want to try Claude but you do not want to start from scratch, this is the cleanest way to bring your context with you.",
+      "contentType": "quick tip",
+      "why": "This combines fresh migration interest with Braydon's proven Claude education cluster and prior context-file content."
+    },
+    {
+      "title": "The beginner-friendly AI agent that actually does the boring work",
+      "tags": [
+        "🌊 wave-ride"
+      ],
+      "about": "Explain the new wave of no-setup agents in plain language: they connect to Gmail, calendar, docs, tasks, and posting tools, but Braydon shows the safe first workflow instead of hyping autonomous everything.",
+      "evidence": "Marcinteodoru's May 15/16 AI SuperAgents post hit 31.1K views. Cover OCR extracted \"Ai SuperAgents are LIVE! No more 14 hours Openclaw and Hermes Stress.\" Rachel Woods' recent operator posts show the same theme from the business operations angle, with one May 15 post at 2.1K views.",
+      "onScreenTitle": "Your first useful AI agent",
+      "spokenHook": "If AI agents feel too technical, start here. Give one agent one boring job, then make it prove itself before you trust it with anything bigger.",
+      "contentType": "myth-bust",
+      "why": "Agents are moving from coder-only to beginner-friendly. Braydon's mentor voice can make the shift useful without sounding like tool hype."
     },
     {
       "title": "Stop using AI like a yes-man",

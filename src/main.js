@@ -48,7 +48,7 @@ function renderHero() {
   get('competitorCount').textContent = fmt.format(d.stats.competitorPosts || d.competitors.length);
   get('coverageCount').textContent = `${fmt.format(d.stats.handlesCovered || 0)}/10`;
   get('latestDate').textContent = d.date;
-  get('generatedAt').textContent = `Generated ${new Date(d.generatedAt).toLocaleString()} · recent feed title coverage ${d.stats.recentTitleCoverage || d.stats.titleCoverage || 'n/a'} · recent spoken-hook coverage ${d.stats.recentSpokenHookCoverage || d.stats.spokenHookCoverage || 'n/a'} · ${fmt.format(d.stats.sourceIdeaSignals || 0)} source signals`;
+  get('generatedAt').textContent = `Generated ${new Date(d.generatedAt).toLocaleString()} · recent feed title coverage ${d.stats.recentTitleCoverage || d.stats.titleCoverage || 'n/a'} · recent spoken-hook coverage ${d.stats.recentSpokenHookCoverage || d.stats.spokenHookCoverage || 'n/a'} · cache ${d.stats.recentCacheCoverage || d.stats.cacheCoverage || 'n/a'} · ${fmt.format(d.stats.sourceIdeaSignals || 0)} source signals`;
   get('footerUpdated').textContent = `Published ${new Date(d.publishedAt).toLocaleString()}`;
 }
 function renderIdeas() {
@@ -103,7 +103,7 @@ function renderCompetitors() {
     return `
     <article class="feed-item">
       <div class="feed-top"><strong>@${escapeHtml(item.creator)}</strong><span class="metric">${escapeHtml(metricLine(item))}</span></div>
-      <div class="meta-line">${escapeHtml(item.date || '')}${age !== null ? ` · ${age}d old` : ''}${item.isSponsored ? ' · sponsored/ad signal' : ''}</div>
+      <div class="meta-line">${escapeHtml(item.date || '')}${age !== null ? ` · ${age}d old` : ''}${item.postDateUtc && item.postDateUtc !== item.date ? ` · UTC ${escapeHtml(item.postDateUtc)}` : ''}${item.isSponsored ? ' · sponsored/ad signal' : ''}</div>
       <div class="${badgeClass}">${escapeHtml(badge)}</div>
       <p>${escapeHtml(compact(item.topic || item.text || '', 230))}</p>
       ${item.onScreenTitle ? `<div class="label">Title</div><div class="hook">${escapeHtml(item.onScreenTitle)}</div>` : ''}

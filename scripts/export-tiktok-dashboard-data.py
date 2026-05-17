@@ -10,10 +10,12 @@ import json
 import re
 from datetime import date, datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path('/opt/data/hermes-content/tiktok')
 REPO = Path('/opt/data/repos/tiktok-ideas-dashboard')
 OUT = REPO / 'data' / 'latest.json'
+MT = ZoneInfo('America/Denver')
 
 
 def read_text(path: Path) -> str:
@@ -101,6 +103,18 @@ def load_hook_cache() -> dict:
     return load_json(ROOT / 'data' / 'tiktok-hooks-cache.json', {})
 
 
+def post_dates(create_time_iso: str) -> tuple[str, str]:
+    """Return (mountain_date, utc_date) for a TikTok createTimeISO string."""
+    if not create_time_iso:
+        return '', ''
+    utc_date = create_time_iso[:10]
+    try:
+        dt = datetime.fromisoformat(create_time_iso.replace('Z', '+00:00'))
+        return dt.astimezone(MT).date().isoformat(), utc_date
+    except Exception:
+        return utc_date, utc_date
+
+
 def enrich_items(items: list[dict], cache_section: dict) -> list[dict]:
     enriched = []
     for item in items:
@@ -110,14 +124,21 @@ def enrich_items(items: list[dict], cache_section: dict) -> list[dict]:
         hook = cached.get('spoken_hook') or cached.get('spokenHook') or ''
         title = '' if title in {'—', 'NEEDS_VISION_OCR'} else title
         hook = '' if hook == '—' else hook
+        mountain_date, utc_date = post_dates(item.get('createTimeISO') or '')
         enriched.append({
             'id': vid,
             'creator': item.get('creator'),
-            'date': (item.get('createTimeISO') or '')[:10],
+            'date': mountain_date,
+            'postDateMountain': mountain_date,
+            'postDateUtc': utc_date,
+            'createTimeISO': item.get('createTimeISO') or '',
             'text': clean(item.get('text', '')),
             'topic': clean(title or item.get('text', '')),
             'onScreenTitle': clean(title),
             'spokenHook': clean(hook),
+            'cacheHit': bool(cached),
+            'hasExtractedTitle': bool(clean(title)),
+            'hasExtractedSpokenHook': bool(clean(hook)),
             'playCount': item.get('playCount'),
             'diggCount': item.get('diggCount'),
             'commentCount': item.get('commentCount'),
@@ -181,6 +202,9 @@ def coverage_stats(summary: dict, competitors: list[dict], scan_date: str = '') 
     recent_total = len(recent)
     recent_title_count = sum(1 for x in recent if x.get('onScreenTitle'))
     recent_hook_count = sum(1 for x in recent if x.get('spokenHook'))
+    cache_hits = sum(1 for x in competitors if x.get('cacheHit'))
+    cache_misses = total - cache_hits
+    recent_cache_hits = sum(1 for x in recent if x.get('cacheHit'))
     source_signals = sum(1 for x in recent if (x.get('playCount') or 0) >= 10000)
     monitoring_signals = sum(1 for x in recent if 2000 <= (x.get('playCount') or 0) < 10000)
     return {
@@ -194,6 +218,10 @@ def coverage_stats(summary: dict, competitors: list[dict], scan_date: str = '') 
         'recentCompetitorPosts': recent_total,
         'recentTitleCoverage': f'{recent_title_count}/{recent_total}' if recent_total else '0/0',
         'recentSpokenHookCoverage': f'{recent_hook_count}/{recent_total}' if recent_total else '0/0',
+        'cacheHits': cache_hits,
+        'cacheMisses': cache_misses,
+        'cacheCoverage': f'{cache_hits}/{total}',
+        'recentCacheCoverage': f'{recent_cache_hits}/{recent_total}' if recent_total else '0/0',
         'sourceIdeaSignals': source_signals,
         'monitoringSignals': monitoring_signals,
     }

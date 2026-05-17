@@ -1,69 +1,68 @@
 {
   "date": "2026-05-17",
-  "generatedAt": "2026-05-17T14:26:52.386804+00:00",
-  "publishedAt": "2026-05-17T14:28:58.334867+00:00",
+  "generatedAt": "2026-05-17T14:33:44.456532+00:00",
+  "publishedAt": "2026-05-17T14:33:48.242148+00:00",
   "sourceIdeaFile": "/opt/data/hermes-content/tiktok/ideas/2026-05-17-tiktok-ideas.md",
   "ideas": [
     {
-      "title": "Claude is becoming the creative department",
+      "title": "Claude finance agents are not about replacing your accountant",
       "tags": [
-        "🔁 V2",
-        "reframe"
+        "📰 news"
       ],
-      "about": "Turn the Claude + Higgsfield and cartoon-video momentum into a simple business demo: Claude creates the campaign brief, image asset, cartoon variation, and video direction for a real small business.",
-      "evidence": "Braydon's own Claude + Higgsfield post is now at 101.2K views, and the newer Claude cartoon video is already at 41.2K views. Justyn's Higgsfield MCP + Claude competitor post is also still a recent 57.6K wave signal.",
-      "onScreenTitle": "Claude is your creative department now",
-      "spokenHook": "Claude used to help you plan the campaign. Now it can help make the image, the cartoon, and the video, so let me show you what this means for a real business.",
-      "contentType": "tool breakdown",
-      "why": "This is the strongest combined owned-account and competitor signal in the rerun. It also fits Braydon's best lane: visible business-output demos."
-    },
-    {
-      "title": "The 10 finance agents your accountant should know about",
-      "tags": [
-        "🌊 wave-ride"
-      ],
-      "about": "Use the competitor signal as a plain-English small-business finance breakdown. Show 3 practical ways Claude can help before an accountant meeting: statement review, invoice cleanup, and cash-flow questions.",
-      "evidence": "nocode.joshua's May 16 finance-agents post reached 237.4K views in this rerun. Cover OCR has the title “Claude just killed the Finance Industry.” Subtitle links were missing, so this remains a title + caption + performance signal rather than a verified spoken-hook signal.",
-      "onScreenTitle": "Claude can read your finances now",
-      "spokenHook": "This does not mean Claude replaces your accountant. It means small business owners can finally ask better questions before the meeting.",
-      "contentType": "tutorial",
-      "why": "The competitor wave is the biggest fresh 10K+ signal, but Braydon can make it more human, safer, and more useful than the replacement framing."
-    },
-    {
-      "title": "Move from ChatGPT to Claude without starting over",
-      "tags": [
-        "🌊 wave-ride"
-      ],
-      "about": "Show a simple memory/context handoff path between tools, then frame it as business continuity: your AI should remember your brand, customers, offers, and constraints.",
-      "evidence": "Sabrina Ramonov's ChatGPT-to-Claude migration post is at 29.4K views. Her spoken hook is cached: “Here's how to move from ChatGPT to Claude in four simple clicks.” Taki's Claude handoff/memory post is also still at 26.5K views.",
-      "onScreenTitle": "Move your ChatGPT brain to Claude",
-      "spokenHook": "If you want to try Claude but you do not want to start from scratch, this is the cleanest way to bring your context with you.",
-      "contentType": "quick tip",
-      "why": "It combines migration curiosity with Braydon's proven Claude education cluster, and it gives Frank a plain reason to care: do not lose your business context."
-    },
-    {
-      "title": "Your first useful AI agent",
-      "tags": [
-        "🌊 wave-ride"
-      ],
-      "about": "Explain the new wave of beginner-friendly agents in plain language. Start with one boring job, like researching leads, organizing saved posts, or prepping a client follow-up, then make the agent prove itself.",
-      "evidence": "Marcinteodoru's AI SuperAgents post is at 32K views with the title “AI SuperAgents are beginner friendly.” Rachel Woods added a new AI operations post today, with both title and WebVTT hook extracted, showing the same beginner path from an operator angle.",
-      "onScreenTitle": "Your first useful AI agent",
-      "spokenHook": "If AI agents feel too technical, start here. Give one agent one boring job, then make it prove itself before you trust it with anything bigger.",
+      "about": "Claude released finance-agent capabilities, and nocode.joshua's finance-agent post is already a strong competitor signal. Braydon's angle should be calm and practical: use this before a money meeting so you ask better questions.",
+      "evidence": "nocode.joshua's May 16 post is at 239.2K views. Cached title: \"Claude just killed the Finance Industry.\" Cached spoken hook: \"Did Claude just kill the finance industry? Claude just released 10 new finance...\" This is the clearest fresh competitor wave.",
+      "onScreenTitle": "Claude did not replace your accountant",
+      "spokenHook": "Claude just got finance agents, but the smartest use is not firing your accountant.",
       "contentType": "myth-bust",
-      "why": "Agents are still current, but Braydon's best version is calm, practical, and operator-safe instead of hypey."
+      "why": "It rides a high-performing competitor topic while giving Braydon a more trusted, mentor-style angle that fits bookers and avoids fear-based replacement language."
     },
     {
-      "title": "Stop using AI like a yes-man",
+      "title": "Move from ChatGPT to Claude without losing your mind",
       "tags": [
         "🌊 wave-ride"
       ],
-      "about": "Teach a custom instruction that makes ChatGPT or Claude challenge weak ideas, ask for missing context, and protect the user from lazy answers.",
-      "evidence": "Sabrina's ChatGPT pushback post is at 24.2K views. On-screen title: “How to force ChatGPT to challenge you.” Spoken hook: “ChatGPT just agrees with everything you say. But this one prompt fixes that forever.”",
-      "onScreenTitle": "Make AI push back on you",
-      "spokenHook": "If your AI agrees with every idea you have, it is not helping enough. Add this one instruction and make it think with you.",
+      "about": "A practical migration video for regular AI users who are curious about Claude but do not know what changes. Braydon can make this more human than a tool tutorial: what to move, what to leave, and when ChatGPT is still enough.",
+      "evidence": "sabrina_ramonov's May 16 migration post is at 29.5K views. Cached title: \"How to move from ChatGPT to Claude.\" Cached spoken hook: \"Here's how to move from ChatGPT to Claude in four simple clicks.\" Braydon's own Claude visual posts are also outperforming.",
+      "onScreenTitle": "Switching to Claude? Start here",
+      "spokenHook": "If you have only used ChatGPT, here is the simplest way to try Claude without rebuilding your whole workflow.",
+      "contentType": "tutorial",
+      "why": "It combines a current competitor tutorial signal with Braydon's strongest recent account lane: approachable Claude education."
+    },
+    {
+      "title": "AI work is moving to your phone",
+      "tags": [
+        "📰 news"
+      ],
+      "about": "OpenAI put Codex in the ChatGPT mobile app. Braydon should frame this as a shift in how people manage AI work, not as a coding feature for developers only.",
+      "evidence": "OpenAI's official May 14 post on Codex in the ChatGPT mobile app has 21.6K likes and 4.6K bookmarks. Official text: \"Start new work, review outputs, steer execution, and approve next steps, all from the ChatGPT mobile app.",
+      "onScreenTitle": "AI work is leaving the laptop",
+      "spokenHook": "The important part of Codex on mobile is not coding on your phone. It is checking and steering AI work while life keeps moving.",
+      "contentType": "hot take",
+      "why": "This turns a developer launch into a plain-English workplace behavior shift. That fits Braydon's educator and keynote positioning better than a feature recap."
+    },
+    {
+      "title": "One-person companies are becoming normal teams",
+      "tags": [
+        "🌊 wave-ride"
+      ],
+      "about": "Explain why \"one person plus AI\" is not a hustle-flex. It is a new operating pattern where AI covers first drafts, research, ops, and admin while the human keeps judgment.",
+      "evidence": "brandnat's May 12 post is at 275.5K views. Cached title: \"One person companies that feel like you hired 23 roles.\" Cached spoken hook begins: \"Open sourced project for one person companies that feel like you just hired...\" This is a strong recent source idea signal.",
+      "onScreenTitle": "One person, 23 helper roles",
+      "spokenHook": "The future is not one person doing everything. It is one person knowing which AI helper to call for each job.",
+      "contentType": "story",
+      "why": "It borrows the proven \"AI team\" frame, but keeps Braydon's human-centered stance: AI extends expertise, it does not replace the person."
+    },
+    {
+      "title": "Claude memory is the new workflow problem",
+      "tags": [
+        "🌊 wave-ride"
+      ],
+      "about": "Make a quick explainer on why people think Claude is \"forgetting,\" and the simple handoff habit that makes AI work more reliable.",
+      "evidence": "taki.gpt's May 14 Claude handoff post is at 26.6K views. Cached title: \"The Best Claude Memory Fix With the best Claude Handoff Skill.\" Cached spoken hook: \"Claude forgets everything after the first 20 messages. Here's the fastest fix...\" Braydon's audience benefits from the plain-English version.",
+      "onScreenTitle": "Claude needs a handoff note",
+      "spokenHook": "If Claude starts getting messy after a long chat, the fix is not a better prompt. It is a handoff habit.",
       "contentType": "quick tip",
-      "why": "It is simple, beginner-friendly, and directly matches Braydon's mentor positioning: AI should extend your expertise, not flatter you."
+      "why": "It is a concrete productivity pain point, it sits inside the current Claude wave, and it gives Braydon a mentor-friendly workflow takeaway."
     }
   ],
   "stats": {
@@ -82,13 +81,13 @@
       "tony.aube"
     ],
     "missingHandles": [],
-    "titleCoverage": "37/47",
+    "titleCoverage": "40/47",
     "spokenHookCoverage": "38/47",
     "recentWindowDays": 10,
     "recentCompetitorPosts": 34,
-    "recentTitleCoverage": "30/34",
+    "recentTitleCoverage": "31/34",
     "recentSpokenHookCoverage": "30/34",
-    "recentCompleteHookCoverage": "28/34",
+    "recentCompleteHookCoverage": "29/34",
     "newCompetitorPosts": 1,
     "newTitleCoverage": "0/1",
     "newSpokenHookCoverage": "0/1",
@@ -349,11 +348,11 @@
       "postDateUtc": "2026-04-25",
       "createTimeISO": "2026-04-25T23:33:07.000Z",
       "text": "copy_175D0F2I9-4Du can just do things with 5.5 + Codex... no idea how any of this works. \"just run it locally bro\"54-4180-AD8E-0E64DB290005",
-      "topic": "copy_175D0F2I9-4Du can just do things with 5.5 + Codex... no idea how any of this works. \"just run it locally bro\"54-4180-AD8E-0E64DB290005",
-      "onScreenTitle": "",
+      "topic": "OH",
+      "onScreenTitle": "OH",
       "spokenHook": "Oh my God Codex is actually insane look at this this is a new animation engine the animation engine uses AI to generate every next pose in real time instead of human animators having to build frames manually and it's really fast and I used to always see these little experiments on X and get uh FOMO because I wasn't technical I don't know how to like download the code off Git Hub but now we have AI I was able to get it running in about 5 minutes using Codex and I'm gonna show you exactly how you do it so this guy is the original poster and here is the Github link to uh the project that he's working on and I saw there's a lot of stars and so then I went to Codex I pasted the link and was like can you run this locally? I wanna try this it sounds really fun and interesting seven minutes and 26 seconds later started doing some stuff on my terminal and then this popped up and so now I can change it to a dog and you can even change it to a corgi some of them are a lot worse than others this is a pretty weird mesh but I'm gonna can also be like hey can you also add some grass and then other things around the environment?",
       "cacheHit": true,
-      "hasExtractedTitle": false,
+      "hasExtractedTitle": true,
       "hasExtractedSpokenHook": true,
       "playCount": 7718,
       "diggCount": 254,
@@ -925,11 +924,11 @@
       "postDateUtc": "2026-04-27",
       "createTimeISO": "2026-04-27T00:01:05.000Z",
       "text": "",
-      "topic": "",
-      "onScreenTitle": "",
+      "topic": "5-IN-1 AI VIDEO PLATFORM",
+      "onScreenTitle": "5-IN-1 AI VIDEO PLATFORM",
       "spokenHook": "Stop asking which is the best AI video generator? Come closer.",
       "cacheHit": true,
-      "hasExtractedTitle": false,
+      "hasExtractedTitle": true,
       "hasExtractedSpokenHook": true,
       "playCount": 6315,
       "diggCount": 197,
@@ -1189,11 +1188,11 @@
       "postDateUtc": "2026-05-17",
       "createTimeISO": "2026-05-17T05:47:18.000Z",
       "text": "Exposing insane AI playbooks (part 1)",
-      "topic": "Exposing insane AI playbooks (part 1)",
-      "onScreenTitle": "",
+      "topic": "AI videos",
+      "onScreenTitle": "AI videos",
       "spokenHook": "No one creates AI videos better than Emily Higgins on the entire internet and I just got her to spill her entire secret sauce. Welcome to exposing Insane AI Playbooks part 1.",
       "cacheHit": true,
-      "hasExtractedTitle": false,
+      "hasExtractedTitle": true,
       "hasExtractedSpokenHook": true,
       "playCount": 716,
       "diggCount": 54,
@@ -1263,11 +1262,11 @@
       "postDateUtc": "2026-05-16",
       "createTimeISO": "2026-05-16T14:57:53.000Z",
       "text": "Here is how you can train Claude better and give it better memory to produce better results! #claude #claudetiktok #ai #aitips #learnai",
-      "topic": "Here is how you can train Claude better and give it better memory to produce better results! #claude #claudetiktok #ai #aitips #learnai",
-      "onScreenTitle": "",
+      "topic": "Claude: Give Claude a better memory for your project! 🔥",
+      "onScreenTitle": "Claude: Give Claude a better memory for your project! 🔥",
       "spokenHook": "",
       "cacheHit": true,
-      "hasExtractedTitle": false,
+      "hasExtractedTitle": true,
       "hasExtractedSpokenHook": false,
       "playCount": 1647,
       "diggCount": 39,
@@ -1311,11 +1310,11 @@
       "postDateUtc": "2026-05-15",
       "createTimeISO": "2026-05-15T23:30:43.000Z",
       "text": "Codex can now work on your PHONE! Check this out! #chatgpt #codex #ai #aitips #learnai",
-      "topic": "Codex can now work on your PHONE! Check this out! #chatgpt #codex #ai #aitips #learnai",
-      "onScreenTitle": "",
+      "topic": "Codex can now work from your phone 🤯🤯",
+      "onScreenTitle": "Codex can now work from your phone 🤯🤯",
       "spokenHook": "",
       "cacheHit": true,
-      "hasExtractedTitle": false,
+      "hasExtractedTitle": true,
       "hasExtractedSpokenHook": false,
       "playCount": 564,
       "diggCount": 7,
@@ -1663,5 +1662,5 @@
     }
   ],
   "news": [],
-  "briefMarkdown": "# TikTok Ideas for Braydon Carter - 2026-05-17\n\nGenerated: 2026-05-17 8:28 AM MDT\n\nSource of truth: Hermes-native workspace `/opt/data/hermes-content/tiktok/`\n\nManual rerun note: this updated the same May 17 idea file in place as a morning-cron comparison. No duplicate same-day idea file was created.\n\n## Evidence check\n\n### Cache health\n\n- Fresh Daily Success Scan covered all 10 configured competitor handles.\n- 7-10 day competitor cache health from the rerun scan: 37 recent-window competitor posts, with 35/37 on-screen titles cached or extracted, 35/37 spoken hooks cached or extracted, and 33/37 with both title and spoken hook.\n- Paid TikTok transcription stayed disabled. Spoken hooks came from existing cache or returned subtitle/WebVTT links.\n\n### New competitor posts found\n\n- Newly seen competitor posts before cache writes: 1.\n- New-post title coverage: 1/1.\n- New-post spoken-hook coverage: 1/1.\n- Combined new title + hook coverage: 1/1.\n- New item: the.rachelwoods on AI operations, 788 views at scrape time. On-screen title: “3 steps to get into AI operations (our levels framework).” Spoken hook extracted from WebVTT.\n\n### Braydon performance signals\n\n- Braydon scrape returned 30 latest non-pinned posts.\n- Current owned winner in the active creative lane: Claude + Higgsfield moved from 95.8K in the morning brief to 101.2K in this rerun.\n- Newest strong owned signal: Claude cartoon videos moved from 27.9K in the morning brief to 41.2K views, with 1,722 likes and 466 shares.\n- Full-window leader: Claude UGC remains at 169.3K views.\n\n## Best ideas for today\n\n**Claude is becoming the creative department** `🔁 V2/reframe` `🌊 wave-ride`\n- **What it's about:** Turn the Claude + Higgsfield and cartoon-video momentum into a simple business demo: Claude creates the campaign brief, image asset, cartoon variation, and video direction for a real small business.\n- **Evidence:** Braydon's own Claude + Higgsfield post is now at 101.2K views, and the newer Claude cartoon video is already at 41.2K views. Justyn's Higgsfield MCP + Claude competitor post is also still a recent 57.6K wave signal.\n- **On-screen title:** Claude is your creative department now\n- **Spoken hook:** Claude used to help you plan the campaign. Now it can help make the image, the cartoon, and the video, so let me show you what this means for a real business.\n- **Content type:** tool breakdown\n- **Why this should work:** This is the strongest combined owned-account and competitor signal in the rerun. It also fits Braydon's best lane: visible business-output demos.\n\n**The 10 finance agents your accountant should know about** `🌊 wave-ride`\n- **What it's about:** Use the competitor signal as a plain-English small-business finance breakdown. Show 3 practical ways Claude can help before an accountant meeting: statement review, invoice cleanup, and cash-flow questions.\n- **Evidence:** nocode.joshua's May 16 finance-agents post reached 237.4K views in this rerun. Cover OCR has the title “Claude just killed the Finance Industry.” Subtitle links were missing, so this remains a title + caption + performance signal rather than a verified spoken-hook signal.\n- **On-screen title:** Claude can read your finances now\n- **Spoken hook:** This does not mean Claude replaces your accountant. It means small business owners can finally ask better questions before the meeting.\n- **Content type:** tutorial\n- **Why this should work:** The competitor wave is the biggest fresh 10K+ signal, but Braydon can make it more human, safer, and more useful than the replacement framing.\n\n**Move from ChatGPT to Claude without starting over** `🌊 wave-ride` `🔁 V2/reframe`\n- **What it's about:** Show a simple memory/context handoff path between tools, then frame it as business continuity: your AI should remember your brand, customers, offers, and constraints.\n- **Evidence:** Sabrina Ramonov's ChatGPT-to-Claude migration post is at 29.4K views. Her spoken hook is cached: “Here's how to move from ChatGPT to Claude in four simple clicks.” Taki's Claude handoff/memory post is also still at 26.5K views.\n- **On-screen title:** Move your ChatGPT brain to Claude\n- **Spoken hook:** If you want to try Claude but you do not want to start from scratch, this is the cleanest way to bring your context with you.\n- **Content type:** quick tip\n- **Why this should work:** It combines migration curiosity with Braydon's proven Claude education cluster, and it gives Frank a plain reason to care: do not lose your business context.\n\n**Your first useful AI agent** `🌊 wave-ride` `📰 news`\n- **What it's about:** Explain the new wave of beginner-friendly agents in plain language. Start with one boring job, like researching leads, organizing saved posts, or prepping a client follow-up, then make the agent prove itself.\n- **Evidence:** Marcinteodoru's AI SuperAgents post is at 32K views with the title “AI SuperAgents are beginner friendly.” Rachel Woods added a new AI operations post today, with both title and WebVTT hook extracted, showing the same beginner path from an operator angle.\n- **On-screen title:** Your first useful AI agent\n- **Spoken hook:** If AI agents feel too technical, start here. Give one agent one boring job, then make it prove itself before you trust it with anything bigger.\n- **Content type:** myth-bust\n- **Why this should work:** Agents are still current, but Braydon's best version is calm, practical, and operator-safe instead of hypey.\n\n**Stop using AI like a yes-man** `🌊 wave-ride`\n- **What it's about:** Teach a custom instruction that makes ChatGPT or Claude challenge weak ideas, ask for missing context, and protect the user from lazy answers.\n- **Evidence:** Sabrina's ChatGPT pushback post is at 24.2K views. On-screen title: “How to force ChatGPT to challenge you.” Spoken hook: “ChatGPT just agrees with everything you say. But this one prompt fixes that forever.”\n- **On-screen title:** Make AI push back on you\n- **Spoken hook:** If your AI agrees with every idea you have, it is not helping enough. Add this one instruction and make it think with you.\n- **Content type:** quick tip\n- **Why this should work:** It is simple, beginner-friendly, and directly matches Braydon's mentor positioning: AI should extend your expertise, not flatter you.\n\n## Top competitor posts from the recent window\n\n- **brandnat:** One-person company / GStack, 275.5K views. Title cached: “One person companies that feel like you hired 23 roles.” Use as broad context for solo-operator leverage, not a fresh same-day lock by itself.\n- **nocode.joshua:** Claude finance agents, 237.4K views. Title extracted, spoken hook unavailable because subtitle links were missing. Strongest fresh source-idea signal.\n- **justyn.ai:** Claude + Higgsfield, 57.6K views. Supports Braydon's own creative-output winner.\n- **nocode.joshua:** Kimi / China AI agents, 49.3K views. Strong agent-team interest, but Braydon should translate away from benchmark hype.\n- **marcinteodoru:** AI SuperAgents, 32K views. Useful beginner-agent framing.\n- **sabrina_ramonov:** ChatGPT to Claude migration, 29.4K views, with spoken hook extracted.\n- **taki.gpt:** Claude handoff/memory fix, 26.5K views. Supports the migration/context idea.\n- **sabrina_ramonov:** ChatGPT pushback prompt, 24.2K views, with title and spoken hook cached.\n\n## Research notes\n\n- What's working right now: Claude creative outputs, context/memory transfer, beginner-agent framing, and practical “make AI do useful work” tutorials.\n- Braydon's account is giving the clearest signal: visible Claude output demos are outperforming abstract AI news and framework posts.\n- The new Rachel Woods AI-ops post is useful for cache health and future context, but at 788 views it is not strong enough to drive an idea by itself yet.\n- Several competitor posts still rely on captions/performance because subtitle links were missing, but the recent-window cache is now much healthier after this rerun.\n\n## Saved artifacts\n\n- Idea file: `/opt/data/hermes-content/tiktok/ideas/2026-05-17-tiktok-ideas.md`\n- Run artifacts: `/opt/data/hermes-content/tiktok/tmp/2026-05-17-0820-rerun-run/`\n- Hook cache updated: `/opt/data/hermes-content/tiktok/data/tiktok-hooks-cache.json`\n- Performance log appended: `/opt/data/hermes-content/tiktok/data/tiktok-performance-log.md`\n"
+  "briefMarkdown": "# TikTok Ideas - 2026-05-17\n\nUpdated: 2026-05-17 2:27 PM MT  \nRun type: manual rerun of the May 17 morning cron, updating the same daily file in place.\n\n## Evidence dashboard\n\n### Cache health\n\n- Recent 7-10 day competitor window: 18 posts.\n- Recent competitor title coverage: 18/18.\n- Recent competitor spoken-hook coverage: 13/18.\n- Combined recent title + spoken-hook coverage: 13/18.\n- Latest run artifacts written to: `/opt/data/hermes-content/tiktok/tmp/2026-05-17-1427-manual-rerun/`.\n- Dashboard inputs now include `summary.json`, `competitors_compact.json`, and `braydon_compact.json` from this rerun.\n\n### New competitor enrichment\n\n- New competitor posts found before cache writes: 7.\n- New-post on-screen title coverage: 7/7.\n- New-post spoken-hook coverage: 5/7.\n- Combined new title + spoken-hook coverage: 5/7.\n- Scrape/metrics layer succeeded for all 10 target competitors. Debug note: 48 competitor items returned after small-batch scraping and retries, but the meaningful number is the 7 newly discovered posts and the current 7-10 day cache coverage.\n\n### Braydon account signal\n\n- Braydon latest 30 scrape succeeded.\n- The May 16 Claude cartoon/visual post is still moving: about 41.8K views, 1.7K likes, 64 comments, 463 shares.\n- The May 15 Claude visual/tool post remains the strongest recent benchmark: about 101.5K views, 3.7K likes, 95 comments, 599 shares.\n- The account pattern is clear: visual Claude demos and concrete workflow breakdowns beat abstract AI news.\n\n## Best ideas for today\n\n**Claude finance agents are not about replacing your accountant** `📰 news` `🌊 wave-ride`\n- **What it's about:** Claude released finance-agent capabilities, and nocode.joshua's finance-agent post is already a strong competitor signal. Braydon's angle should be calm and practical: use this before a money meeting so you ask better questions.\n- **Evidence:** nocode.joshua's May 16 post is at 239.2K views. Cached title: \"Claude just killed the Finance Industry.\" Cached spoken hook: \"Did Claude just kill the finance industry? Claude just released 10 new finance...\" This is the clearest fresh competitor wave.\n- **On-screen title:** Claude did not replace your accountant\n- **Spoken hook:** Claude just got finance agents, but the smartest use is not firing your accountant.\n- **Content type:** myth-bust\n- **Why this should work:** It rides a high-performing competitor topic while giving Braydon a more trusted, mentor-style angle that fits bookers and avoids fear-based replacement language.\n\n**Move from ChatGPT to Claude without losing your mind** `🌊 wave-ride` `🔁 V2/reframe`\n- **What it's about:** A practical migration video for regular AI users who are curious about Claude but do not know what changes. Braydon can make this more human than a tool tutorial: what to move, what to leave, and when ChatGPT is still enough.\n- **Evidence:** sabrina_ramonov's May 16 migration post is at 29.5K views. Cached title: \"How to move from ChatGPT to Claude.\" Cached spoken hook: \"Here's how to move from ChatGPT to Claude in four simple clicks.\" Braydon's own Claude visual posts are also outperforming.\n- **On-screen title:** Switching to Claude? Start here\n- **Spoken hook:** If you have only used ChatGPT, here is the simplest way to try Claude without rebuilding your whole workflow.\n- **Content type:** tutorial\n- **Why this should work:** It combines a current competitor tutorial signal with Braydon's strongest recent account lane: approachable Claude education.\n\n**AI work is moving to your phone** `📰 news`\n- **What it's about:** OpenAI put Codex in the ChatGPT mobile app. Braydon should frame this as a shift in how people manage AI work, not as a coding feature for developers only.\n- **Evidence:** OpenAI's official May 14 post on Codex in the ChatGPT mobile app has 21.6K likes and 4.6K bookmarks. Official text: \"Start new work, review outputs, steer execution, and approve next steps, all from the ChatGPT mobile app.\"\n- **On-screen title:** AI work is leaving the laptop\n- **Spoken hook:** The important part of Codex on mobile is not coding on your phone. It is checking and steering AI work while life keeps moving.\n- **Content type:** hot take\n- **Why this should work:** This turns a developer launch into a plain-English workplace behavior shift. That fits Braydon's educator and keynote positioning better than a feature recap.\n\n**One-person companies are becoming normal teams** `🌊 wave-ride`\n- **What it's about:** Explain why \"one person plus AI\" is not a hustle-flex. It is a new operating pattern where AI covers first drafts, research, ops, and admin while the human keeps judgment.\n- **Evidence:** brandnat's May 12 post is at 275.5K views. Cached title: \"One person companies that feel like you hired 23 roles.\" Cached spoken hook begins: \"Open sourced project for one person companies that feel like you just hired...\" This is a strong recent source idea signal.\n- **On-screen title:** One person, 23 helper roles\n- **Spoken hook:** The future is not one person doing everything. It is one person knowing which AI helper to call for each job.\n- **Content type:** story\n- **Why this should work:** It borrows the proven \"AI team\" frame, but keeps Braydon's human-centered stance: AI extends expertise, it does not replace the person.\n\n**Claude memory is the new workflow problem** `🌊 wave-ride` `🔁 V2/reframe`\n- **What it's about:** Make a quick explainer on why people think Claude is \"forgetting,\" and the simple handoff habit that makes AI work more reliable.\n- **Evidence:** taki.gpt's May 14 Claude handoff post is at 26.6K views. Cached title: \"The Best Claude Memory Fix With the best Claude Handoff Skill.\" Cached spoken hook: \"Claude forgets everything after the first 20 messages. Here's the fastest fix...\" Braydon's audience benefits from the plain-English version.\n- **On-screen title:** Claude needs a handoff note\n- **Spoken hook:** If Claude starts getting messy after a long chat, the fix is not a better prompt. It is a handoff habit.\n- **Content type:** quick tip\n- **Why this should work:** It is a concrete productivity pain point, it sits inside the current Claude wave, and it gives Braydon a mentor-friendly workflow takeaway.\n\n## Top competitor posts in the current evidence set\n\n1. **brandnat, 275.5K views, May 12**\n   - Title: \"One person companies that feel like you hired 23 roles\"\n   - Spoken hook: \"Open sourced project for one person companies that feel like you just hired...\"\n   - Pattern: big promise, specific number, one-person business leverage.\n\n2. **nocode.joshua, 239.2K views, May 16**\n   - Title: \"Claude just killed the Finance Industry\"\n   - Spoken hook: \"Did Claude just kill the finance industry? Claude just released 10 new finance...\"\n   - Pattern: provocative industry claim tied to a real tool update. Use the topic, soften the replacement framing.\n\n3. **justyn.ai, 57.6K views, May 12**\n   - Title: \"Connect Higgsfield to Claude\"\n   - Spoken hook: \"Powerful as Claude is, there's one thing it just can't do until now...\"\n   - Pattern: pair a familiar AI assistant with one missing capability.\n\n4. **marcinteodoru, 32.1K views, May 15**\n   - Title: \"AI SuperAgents are beginner friendly\"\n   - Spoken hook: \"What the. That's how I'm opening this video.\"\n   - Pattern: beginner-friendly agent framing, high curiosity, simple promise.\n\n5. **sabrina_ramonov, 29.5K views, May 16**\n   - Title: \"How to move from ChatGPT to Claude\"\n   - Spoken hook: \"Here's how to move from ChatGPT to Claude in four simple clicks.\"\n   - Pattern: migration tutorial, clear pain point, low friction.\n\n6. **taki.gpt, 26.6K views, May 14**\n   - Title: \"The Best Claude Memory Fix With the best Claude Handoff Skill\"\n   - Spoken hook: \"Claude forgets everything after the first 20 messages. Here's the fastest fix...\"\n   - Pattern: fix a known frustration with a simple workflow habit.\n\n## Early-catch opportunities\n\n- **Codex in the ChatGPT mobile app:** still the strongest official news item from the X scan. Best Braydon angle is practical behavior change, not developer hype.\n- **Claude finance agents:** strongest combined news plus competitor-wave opportunity because the competitor video has already crossed 239K views.\n- **Anthropic/Gates Foundation $200M partnership:** good back-pocket credibility or keynote positioning item, but lower priority for today's TikTok because demos and practical workflows are outperforming.\n\n## Extraction and scraper notes\n\n- Paid TikTok transcription stayed disabled.\n- Cover images were used for on-screen title extraction when URLs were available.\n- Subtitle/WebVTT links were used for spoken hooks when available.\n- Two newly discovered competitor posts had missing or unusable subtitle links, so their spoken hooks remain `—` while their titles and captions are cached.\n- Several older high-view competitor posts are retained as reference context only. The main current-signal logic defaults to the 7-10 day window and uses 10K+ recent views as the source-idea threshold.\n\n## Save and publish status\n\n- Updated existing daily idea file: `/opt/data/hermes-content/tiktok/ideas/2026-05-17-tiktok-ideas.md`.\n- No duplicate same-day idea file was created.\n- Performance log appended with a May 17 refresh section.\n- Early-catch log appended with the rerun news status.\n- Current run artifacts written under `/opt/data/hermes-content/tiktok/tmp/2026-05-17-1427-manual-rerun/`.\n- Dashboard publish attempted after this file update.\n"
 }

@@ -202,9 +202,23 @@ def coverage_stats(summary: dict, competitors: list[dict], scan_date: str = '') 
     recent_total = len(recent)
     recent_title_count = sum(1 for x in recent if x.get('onScreenTitle'))
     recent_hook_count = sum(1 for x in recent if x.get('spokenHook'))
+    recent_complete_count = sum(1 for x in recent if x.get('onScreenTitle') and x.get('spokenHook'))
     cache_hits = sum(1 for x in competitors if x.get('cacheHit'))
     cache_misses = total - cache_hits
     recent_cache_hits = sum(1 for x in recent if x.get('cacheHit'))
+    summary_new_ids = {str(x) for x in (summary.get('new_competitor_ids') or summary.get('newCompetitorIds') or [])}
+    if summary_new_ids:
+        new_items = [x for x in competitors if str(x.get('id') or '') in summary_new_ids]
+    else:
+        # Backward-compatible fallback for older run artifacts: uncached items are
+        # the closest public proxy for posts newly discovered by this run. Future
+        # run summaries should write new_competitor_ids before hook extraction so
+        # successful extraction does not hide that a post was new.
+        new_items = [x for x in competitors if not x.get('cacheHit')]
+    new_total = len(new_items)
+    new_title_count = sum(1 for x in new_items if x.get('onScreenTitle'))
+    new_hook_count = sum(1 for x in new_items if x.get('spokenHook'))
+    new_complete_count = sum(1 for x in new_items if x.get('onScreenTitle') and x.get('spokenHook'))
     source_signals = sum(1 for x in recent if (x.get('playCount') or 0) >= 10000)
     monitoring_signals = sum(1 for x in recent if 2000 <= (x.get('playCount') or 0) < 10000)
     return {
@@ -218,6 +232,11 @@ def coverage_stats(summary: dict, competitors: list[dict], scan_date: str = '') 
         'recentCompetitorPosts': recent_total,
         'recentTitleCoverage': f'{recent_title_count}/{recent_total}' if recent_total else '0/0',
         'recentSpokenHookCoverage': f'{recent_hook_count}/{recent_total}' if recent_total else '0/0',
+        'recentCompleteHookCoverage': f'{recent_complete_count}/{recent_total}' if recent_total else '0/0',
+        'newCompetitorPosts': new_total,
+        'newTitleCoverage': f'{new_title_count}/{new_total}' if new_total else '0/0',
+        'newSpokenHookCoverage': f'{new_hook_count}/{new_total}' if new_total else '0/0',
+        'newCompleteHookCoverage': f'{new_complete_count}/{new_total}' if new_total else '0/0',
         'cacheHits': cache_hits,
         'cacheMisses': cache_misses,
         'cacheCoverage': f'{cache_hits}/{total}',

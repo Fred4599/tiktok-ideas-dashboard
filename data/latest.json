@@ -1,7 +1,7 @@
 {
   "date": "2026-05-17",
   "generatedAt": "2026-05-17T12:39:01.188312+00:00",
-  "publishedAt": "2026-05-17T13:41:54.831734+00:00",
+  "publishedAt": "2026-05-17T13:55:28.666201+00:00",
   "sourceIdeaFile": "/opt/data/hermes-content/tiktok/ideas/2026-05-17-tiktok-ideas.md",
   "ideas": [
     {
@@ -88,6 +88,11 @@
     "recentCompetitorPosts": 34,
     "recentTitleCoverage": "16/34",
     "recentSpokenHookCoverage": "12/34",
+    "recentCompleteHookCoverage": "9/34",
+    "newCompetitorPosts": 4,
+    "newTitleCoverage": "0/4",
+    "newSpokenHookCoverage": "0/4",
+    "newCompleteHookCoverage": "0/4",
     "cacheHits": 43,
     "cacheMisses": 4,
     "cacheCoverage": "43/47",

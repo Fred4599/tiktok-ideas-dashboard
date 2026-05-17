@@ -44,11 +44,16 @@ async function loadData() {
 }
 function renderHero() {
   const d = state.latest;
+  const newPosts = d.stats.newCompetitorPosts ?? d.stats.cacheMisses ?? 0;
+  const newComplete = d.stats.newCompleteHookCoverage || '0/0';
+  const recentTitle = d.stats.recentTitleCoverage || d.stats.titleCoverage || 'n/a';
+  const recentHook = d.stats.recentSpokenHookCoverage || d.stats.spokenHookCoverage || 'n/a';
+  const recentComplete = d.stats.recentCompleteHookCoverage || 'n/a';
   get('ideaCount').textContent = fmt.format(d.ideas.length);
-  get('competitorCount').textContent = fmt.format(d.stats.competitorPosts || d.competitors.length);
-  get('coverageCount').textContent = `${fmt.format(d.stats.handlesCovered || 0)}/10`;
+  get('competitorCount').textContent = fmt.format(newPosts);
+  get('coverageCount').textContent = newComplete;
   get('latestDate').textContent = d.date;
-  get('generatedAt').textContent = `Generated ${new Date(d.generatedAt).toLocaleString()} · recent feed title coverage ${d.stats.recentTitleCoverage || d.stats.titleCoverage || 'n/a'} · recent spoken-hook coverage ${d.stats.recentSpokenHookCoverage || d.stats.spokenHookCoverage || 'n/a'} · cache ${d.stats.recentCacheCoverage || d.stats.cacheCoverage || 'n/a'} · ${fmt.format(d.stats.sourceIdeaSignals || 0)} source signals`;
+  get('generatedAt').textContent = `Generated ${new Date(d.generatedAt).toLocaleString()} · new title coverage ${d.stats.newTitleCoverage || '0/0'} · new spoken-hook coverage ${d.stats.newSpokenHookCoverage || '0/0'} · recent title ${recentTitle} · recent spoken hook ${recentHook} · recent title+hook ${recentComplete} · ${fmt.format(d.stats.sourceIdeaSignals || 0)} source signals`;
   get('footerUpdated').textContent = `Published ${new Date(d.publishedAt).toLocaleString()}`;
 }
 function renderIdeas() {

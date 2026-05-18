@@ -23,8 +23,13 @@ def read_text(path: Path) -> str:
 
 
 def latest_file(pattern: str, base: Path) -> Path | None:
-    files = sorted(base.glob(pattern), key=lambda p: p.stat().st_mtime, reverse=True)
-    return files[0] if files else None
+    files = list(base.glob(pattern))
+    if not files:
+        return None
+    def key(path: Path):
+        m = re.match(r'(\d{4}-\d{2}-\d{2})', path.name)
+        return (m.group(1) if m else '', path.stat().st_mtime)
+    return sorted(files, key=key, reverse=True)[0]
 
 
 def clean(s: str) -> str:
@@ -221,11 +226,21 @@ def coverage_stats(summary: dict, competitors: list[dict], scan_date: str = '') 
     new_complete_count = sum(1 for x in new_items if x.get('onScreenTitle') and x.get('spokenHook'))
     source_signals = sum(1 for x in recent if (x.get('playCount') or 0) >= 10000)
     monitoring_signals = sum(1 for x in recent if 2000 <= (x.get('playCount') or 0) < 10000)
+    summary_handles = summary.get('handles') if isinstance(summary.get('handles'), dict) else None
+    summary_covered = summary.get('covered')
+    if summary_handles:
+        covered_handles = sorted(summary_handles.keys())
+    elif isinstance(summary_covered, list):
+        covered_handles = summary_covered
+    else:
+        covered_handles = handles
+    summary_missing = summary.get('missing')
+    missing_handles = summary_missing if isinstance(summary_missing, list) else []
     return {
         'competitorPosts': summary.get('competitor_count') or total,
-        'handlesCovered': len(summary.get('covered') or handles),
-        'coveredHandles': summary.get('covered') or handles,
-        'missingHandles': summary.get('missing') or [],
+        'handlesCovered': len(covered_handles),
+        'coveredHandles': covered_handles,
+        'missingHandles': missing_handles,
         'titleCoverage': f'{title_count}/{total}',
         'spokenHookCoverage': f'{hook_count}/{total}',
         'recentWindowDays': 10,
@@ -243,6 +258,102 @@ def coverage_stats(summary: dict, competitors: list[dict], scan_date: str = '') 
         'recentCacheCoverage': f'{recent_cache_hits}/{recent_total}' if recent_total else '0/0',
         'sourceIdeaSignals': source_signals,
         'monitoringSignals': monitoring_signals,
+    }
+
+
+
+def strip_md(s: str) -> str:
+    s = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'\1', s or '')
+    s = re.sub(r'[`*_#>]', '', s)
+    return clean(s)
+
+
+def section_between(markdown: str, heading_regex: str, stop_regex: str = r'\n## ') -> str:
+    m = re.search(heading_regex + r'\n\n?(.*?)(?=' + stop_regex + r'|\Z)', markdown, re.S | re.I)
+    return m.group(1).strip() if m else ''
+
+
+def top_context(markdown: str) -> dict:
+    # Capture the human strategist read near the top before REVISION/Idea/Research sections.
+    title_end = re.search(r'\n# [^\n]+\n', markdown)
+    start = title_end.end() if title_end else 0
+    end_match = re.search(r'\n## (REVISION|SHOOTING|Idea\s+\d+|Research Notes|Bullet-Point Scripts)', markdown[start:], re.I)
+    end = start + end_match.start() if end_match else min(len(markdown), start + 5000)
+    block = markdown[start:end].strip('-\n ')
+    strategist = ''
+    posting_order = ''
+    m = re.search(r'\*\*Strategist read\.\*\*\s*(.*?)(?=\n\n\*\*|\n\n---|\Z)', block, re.S)
+    if m:
+        strategist = clean(m.group(1))
+    po = re.search(r'\*\*Recommended posting order:\*\*\s*(.*?)(?=\n\n---|\n\n## |\Z)', block, re.S)
+    if po:
+        posting_order = po.group(1).strip()
+    today = re.search(r"\*\*Today's [^\n]+?\*\*\s*(.*?)(?=\n\n\*\*Recommended posting order|\n\n---|\Z)", block, re.S)
+    return {
+        'introMarkdown': block,
+        'strategistRead': strategist or strip_md(block.split('\n\n')[0] if block else ''),
+        'postingOrderMarkdown': posting_order,
+        'todaySummaryMarkdown': today.group(1).strip() if today else '',
+    }
+
+
+def parse_bullets(markdown: str) -> list[str]:
+    items = []
+    for line in (markdown or '').splitlines():
+        line = line.strip()
+        if line.startswith('- '):
+            items.append(clean(line[2:]))
+        elif re.match(r'^\d+\.\s+', line):
+            items.append(clean(re.sub(r'^\d+\.\s+', '', line)))
+    return items
+
+
+def parse_sources(markdown: str) -> list[dict]:
+    out = []
+    src = section_between(markdown, r'\n## Sources', stop_regex=r'\n## ')
+    for label, url in re.findall(r'\[([^\]]+)\]\((https?://[^)]+)\)', src):
+        out.append({'label': clean(label), 'url': url})
+    return out[:40]
+
+
+def parse_shooting(markdown: str) -> list[dict]:
+    cards = []
+    pattern = re.compile(r'\n## SHOOTING:\s*([^\n]+)\n\n(.*?)(?=\n## |\Z)', re.S | re.I)
+    for m in pattern.finditer(markdown):
+        body = m.group(2).strip()
+        def bold_field(name):
+            mm = re.search(rf'\*\*{re.escape(name)}:\*\*\s*(.*?)(?=\n\n\*\*|\n\n### |\n\n## |\Z)', body, re.S | re.I)
+            return clean(mm.group(1)) if mm else ''
+        cards.append({
+            'title': clean(m.group(1)),
+            'summary': strip_md(body.split('\n\n', 1)[0]),
+            'onScreenTitle': bold_field('On-screen title'),
+            'spokenHook': bold_field('Spoken hook (0-3s)') or bold_field('Spoken hook'),
+            'structureMarkdown': body,
+        })
+    return cards
+
+
+def parse_revision(markdown: str) -> dict:
+    body = section_between(markdown, r'\n## REVISION[^\n]*', stop_regex=r'\n## (SHOOTING|Idea\s+\d+|Research Notes|Bullet-Point Scripts|Sources)')
+    if not body:
+        return {}
+    return {'markdown': body, 'bullets': parse_bullets(body), 'summary': strip_md(body.split('\n\n')[0])}
+
+
+def parse_brief_sections(markdown: str) -> dict:
+    top = top_context(markdown)
+    research = section_between(markdown, r'\n## Research Notes', stop_regex=r'\n## (Bullet-Point Scripts|Sources)')
+    why = section_between(markdown, r'\n## Why [^\n]+', stop_regex=r'\n## (Research Notes|Bullet-Point Scripts|Sources)')
+    scripts = section_between(markdown, r'\n## Bullet-Point Scripts', stop_regex=r'\n## Sources')
+    return {
+        **top,
+        'revision': parse_revision(markdown),
+        'shooting': parse_shooting(markdown),
+        'whyMarkdown': why,
+        'researchMarkdown': research,
+        'scriptsMarkdown': scripts,
+        'sources': parse_sources(markdown),
     }
 
 
@@ -271,6 +382,7 @@ def main() -> int:
         'performance': parse_performance(markdown, braydon, cache.get('braydon', {})),
         'news': parse_news(markdown),
         'briefMarkdown': markdown,
+        'briefSections': parse_brief_sections(markdown),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

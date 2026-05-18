@@ -173,6 +173,15 @@ function renderBrief() {
   const brief = state.latest.briefMarkdown || '';
   get('briefMarkdown').innerHTML = mdBlock(brief, 50000);
 }
+function renderIdeaArchive() {
+  const files = state.latest.ideaArchive || [];
+  get('ideaArchiveList').innerHTML = files.map((f, i) => `
+    <a class="archive-item${i === 0 ? ' latest' : ''}" href="${escapeHtml(f.path)}" target="_blank" rel="noopener">
+      <strong>${escapeHtml(f.date || f.file)}</strong>
+      <span>${escapeHtml(f.file)} · ${Math.round((f.bytes || 0) / 1024)} KB${i === 0 ? ' · latest' : ''}</span>
+    </a>
+  `).join('') || '<span class="muted">No markdown idea files found in the repo archive yet.</span>';
+}
 function renderWarnings() {
   const d = state.latest;
   const missing = d.stats.missingHandles || [];
@@ -192,6 +201,7 @@ function render() {
   renderPerformance();
   renderNews();
   renderResearchFromBrief();
+  renderIdeaArchive();
   renderBrief();
 }
 loadData().then(latest => { state.latest = latest; render(); }).catch(err => {

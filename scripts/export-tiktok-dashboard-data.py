@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import re
+import shutil
 from datetime import date, datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -15,6 +16,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path('/opt/data/hermes-content/tiktok')
 REPO = Path('/opt/data/repos/tiktok-ideas-dashboard')
 OUT = REPO / 'data' / 'latest.json'
+PUBLIC_IDEAS = REPO / 'data' / 'ideas'
 MT = ZoneInfo('America/Denver')
 
 
@@ -357,7 +359,44 @@ def parse_brief_sections(markdown: str) -> dict:
     }
 
 
+
+def sync_idea_markdown_archive() -> list[dict]:
+    """Copy raw daily idea markdown files into the public dashboard repo.
+
+    Braydon explicitly approved publishing the raw historical MD files to the
+    public GitHub Pages dashboard repo on 2026-05-18 so the dashboard can treat
+    the idea-folder archive as its source-of-truth data layer.
+    """
+    src_dir = ROOT / 'ideas'
+    PUBLIC_IDEAS.mkdir(parents=True, exist_ok=True)
+    src_files = sorted(src_dir.glob('*.md'), key=lambda p: p.name)
+    src_names = {p.name for p in src_files}
+    for stale in PUBLIC_IDEAS.glob('*.md'):
+        if stale.name not in src_names:
+            stale.unlink()
+    archive = []
+    for src in src_files:
+        dst = PUBLIC_IDEAS / src.name
+        shutil.copy2(src, dst)
+        m = re.match(r'(\d{4}-\d{2}-\d{2})', src.name)
+        archive.append({
+            'date': m.group(1) if m else '',
+            'file': src.name,
+            'path': f'data/ideas/{src.name}',
+            'bytes': src.stat().st_size,
+            'updatedAt': datetime.fromtimestamp(src.stat().st_mtime, timezone.utc).isoformat(),
+        })
+    archive.sort(key=lambda x: (x['date'], x['file']), reverse=True)
+    (PUBLIC_IDEAS / 'index.json').write_text(json.dumps({
+        'generatedAt': datetime.now(timezone.utc).isoformat(),
+        'count': len(archive),
+        'files': archive,
+    }, indent=2) + '\n')
+    return archive
+
+
 def main() -> int:
+    idea_archive = sync_idea_markdown_archive()
     idea_path = latest_file('*-tiktok-ideas.md', ROOT / 'ideas')
     if not idea_path:
         raise SystemExit('No TikTok idea file found')
@@ -382,6 +421,7 @@ def main() -> int:
         'performance': parse_performance(markdown, braydon, cache.get('braydon', {})),
         'news': parse_news(markdown),
         'briefMarkdown': markdown,
+        'ideaArchive': idea_archive,
         'briefSections': parse_brief_sections(markdown),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)

@@ -23,10 +23,23 @@ function mdBlock(markdown = '', maxChars = 6000) {
   let html = '';
   let inList = false;
   const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
-  for (const raw of lines) {
-    const line = raw.trim();
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i].trim();
     if (!line) { closeList(); continue; }
     if (/^---+$/.test(line)) { closeList(); html += '<hr>'; continue; }
+    if (line.startsWith('|') && lines[i + 1]?.trim().startsWith('|') && /\|\s*-{2,}/.test(lines[i + 1])) {
+      closeList();
+      const headers = line.replace(/^\||\|$/g, '').split('|').map(x => x.trim());
+      i += 2;
+      const rows = [];
+      while (i < lines.length && lines[i].trim().startsWith('|')) {
+        rows.push(lines[i].trim().replace(/^\||\|$/g, '').split('|').map(x => x.trim()));
+        i += 1;
+      }
+      i -= 1;
+      html += '<div class="table-scroll"><table><thead><tr>' + headers.map(h => `<th>${inlineMd(h)}</th>`).join('') + '</tr></thead><tbody>' + rows.map(row => '<tr>' + row.map(cell => `<td>${inlineMd(cell)}</td>`).join('') + '</tr>').join('') + '</tbody></table></div>';
+      continue;
+    }
     const h = line.match(/^(#{2,4})\s+(.*)$/);
     if (h) { closeList(); const level = Math.min(4, h[1].length + 1); html += `<h${level}>${inlineMd(h[2])}</h${level}>`; continue; }
     const bullet = line.match(/^[-*]\s+(.*)$/) || line.match(/^\d+\.\s+(.*)$/);
@@ -79,8 +92,13 @@ function renderHero() {
   get('latestDate').textContent = d.date;
   get('generatedAt').textContent = `Generated ${new Date(d.generatedAt).toLocaleString()} · ${newPosts} new competitor posts · recent title+hook ${d.stats.recentCompleteHookCoverage || 'n/a'} · ${fmt.format(d.stats.sourceIdeaSignals || 0)} source signals`;
   get('footerUpdated').textContent = `Published ${new Date(d.publishedAt).toLocaleString()}`;
-  const heroRead = (sections.strategistRead && sections.strategistRead.length > 60) ? sections.strategistRead : compact(sections.introMarkdown || state.latest.briefMarkdown || '', 900);
-  get('strategistRead').innerHTML = heroRead ? inlineMd(heroRead) : 'Latest brief loaded. Scroll for today’s ideas, performance, competitor research, and news.';
+  const summary = sections.strategistSummary || [];
+  if (summary.length) {
+    get('strategistRead').innerHTML = `<div class="strategist-summary">${summary.map((item, i) => `<div class="summary-card"><span>${i + 1}</span><p>${inlineMd(item)}</p></div>`).join('')}</div>`;
+  } else {
+    const heroRead = (sections.strategistRead && sections.strategistRead.length > 60) ? sections.strategistRead : compact(sections.introMarkdown || state.latest.briefMarkdown || '', 900);
+    get('strategistRead').innerHTML = heroRead ? inlineMd(compact(heroRead, 650)) : 'Latest brief loaded. Scroll for today’s ideas, performance, competitor research, and news.';
+  }
 }
 function renderPriorityBrief() {
   const s = state.latest.briefSections || {};
@@ -153,6 +171,22 @@ function renderCompetitors() {
   }).join('') || '<p>No competitor posts match this filter in the last 10 days. Try All recent posts or another creator.</p>';
 }
 function renderPerformance() {
+  const rows = state.latest.briefSections?.performanceRows || [];
+  if (rows.length) {
+    get('performanceList').innerHTML = rows.map(row => `
+      <div class="performance-card">
+        <div class="performance-top"><strong>${escapeHtml(row['On-Screen Title'] || row['Post Date'] || 'Recent post')}</strong><span>${escapeHtml(row['Post Date'] || '')}</span></div>
+        <div class="mini-metrics">
+          <span>${escapeHtml(row.Views || '—')} views</span>
+          <span>${escapeHtml(row.Saves || '—')} saves</span>
+          <span>${escapeHtml(row['Save Rate'] || '—')} save rate</span>
+        </div>
+        ${row['Spoken Hook'] ? `<div class="label">Spoken hook</div><div class="hook">${escapeHtml(row['Spoken Hook'])}</div>` : ''}
+        ${row.Read ? `<div class="label">Read</div><p>${escapeHtml(row.Read)}</p>` : ''}
+      </div>
+    `).join('');
+    return;
+  }
   const p = state.latest.performance || [];
   get('performanceList').innerHTML = p.map(row => `
     <div class="insight"><strong>${escapeHtml(row.title || row.metric || 'Performance signal')}</strong><span>${escapeHtml(row.detail || row.value || '')}</span></div>

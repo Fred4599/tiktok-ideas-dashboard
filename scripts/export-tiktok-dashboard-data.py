@@ -35,7 +35,8 @@ def latest_file(pattern: str, base: Path) -> Path | None:
 
 
 def clean(s: str) -> str:
-    return re.sub(r'\s+', ' ', (s or '').strip())
+    s = (s or '').replace('方向ally', 'directionally')
+    return re.sub(r'\s+', ' ', s.strip())
 
 
 def idea_from_chunk(title: str, body: str) -> dict:
@@ -310,6 +311,46 @@ def parse_bullets(markdown: str) -> list[str]:
     return items
 
 
+def strategist_summary(strategist_read: str) -> list[str]:
+    """Return a scannable dashboard version of the top strategist paragraph."""
+    text = clean(strategist_read)
+    if not text:
+        return []
+    bullets = []
+    if re.search(r'visual-output|visual output|cartoon videos|images', text, re.I):
+        bullets.append('Account signal: visible Claude output demos are the current winners. Lead with something people can see, not an abstract AI take.')
+    if re.search(r'abstract|too small|Codex mobile|developer-coded|generic', text, re.I):
+        bullets.append('Avoid today: abstract “AI is changing work” angles and narrow developer-coded hooks unless they are tied to a concrete operator outcome.')
+    if re.search(r'finance|accountant', text, re.I):
+        bullets.append('Best finance frame: AI helps you ask better money questions before you talk to your accountant, not “AI replaces finance pros.”')
+    if re.search(r'Canva|design', text, re.I):
+        bullets.append('Best creative frame: Claude + Canva/design workflows, because they stack with both competitor momentum and Braydon’s own visual-demo wins.')
+    if re.search(r'all 10 competitor|37 recent|hook/title extraction|title\+hook', text, re.I):
+        bullets.append('Data quality: today’s board has full competitor coverage and near-complete title/hook extraction, so the recommendations are well-grounded.')
+    if bullets:
+        return bullets[:5]
+    parts = re.split(r'(?<=[.!?])\s+', strip_md(text))
+    return [p for p in parts if p][:3]
+
+
+def parse_markdown_table(section: str) -> list[dict]:
+    lines = [line.strip() for line in (section or '').splitlines()]
+    rows = []
+    i = 0
+    while i < len(lines) - 1:
+        if lines[i].startswith('|') and lines[i + 1].startswith('|') and re.search(r'\|\s*-{2,}', lines[i + 1]):
+            headers = [clean(h) for h in lines[i].strip('|').split('|')]
+            i += 2
+            while i < len(lines) and lines[i].startswith('|'):
+                cells = [clean(c) for c in lines[i].strip('|').split('|')]
+                if len(cells) == len(headers):
+                    rows.append(dict(zip(headers, cells)))
+                i += 1
+            continue
+        i += 1
+    return rows
+
+
 def parse_sources(markdown: str) -> list[dict]:
     out = []
     src = section_between(markdown, r'\n## Sources', stop_regex=r'\n## ')
@@ -345,11 +386,15 @@ def parse_revision(markdown: str) -> dict:
 
 def parse_brief_sections(markdown: str) -> dict:
     top = top_context(markdown)
+    performance = section_between(markdown, r'\n## Performance Check-In', stop_regex=r'\n## Idea\s+\d+')
     research = section_between(markdown, r'\n## Research Notes', stop_regex=r'\n## (Bullet-Point Scripts|Sources)')
     why = section_between(markdown, r'\n## Why [^\n]+', stop_regex=r'\n## (Research Notes|Bullet-Point Scripts|Sources)')
     scripts = section_between(markdown, r'\n## Bullet-Point Scripts', stop_regex=r'\n## Sources')
     return {
         **top,
+        'strategistSummary': strategist_summary(top.get('strategistRead', '')),
+        'performanceMarkdown': performance,
+        'performanceRows': parse_markdown_table(performance),
         'revision': parse_revision(markdown),
         'shooting': parse_shooting(markdown),
         'whyMarkdown': why,

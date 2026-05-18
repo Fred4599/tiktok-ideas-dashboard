@@ -387,11 +387,13 @@ def sync_idea_markdown_archive() -> list[dict]:
             'updatedAt': datetime.fromtimestamp(src.stat().st_mtime, timezone.utc).isoformat(),
         })
     archive.sort(key=lambda x: (x['date'], x['file']), reverse=True)
-    (PUBLIC_IDEAS / 'index.json').write_text(json.dumps({
+    manifest = {
         'generatedAt': datetime.now(timezone.utc).isoformat(),
         'count': len(archive),
         'files': archive,
-    }, indent=2) + '\n')
+    }
+    (PUBLIC_IDEAS / 'index.json').write_text(json.dumps(manifest, indent=2) + '\n')
+    (REPO / 'data' / 'idea-files.json').write_text(json.dumps(manifest, indent=2) + '\n')
     return archive
 
 
